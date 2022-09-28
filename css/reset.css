@@ -166,3 +166,7 @@ input[type="number"]::-webkit-out-spin-button {
   -moz-box-sizing: border-box; /* 파이어폭스(Firefox)*/
   -webkit-box-sizing: border-box; /* 웹킷(Webkit) & 크롬(Chrome) */
 }
+button,
+html [type="button"] {
+  -webkit-appearance: none;
+}
