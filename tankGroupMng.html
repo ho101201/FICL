@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>수조동 관리</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>수조동 관리</p>
+      <img class="iconL" src="/images/arrowL.png" alt="arrowL" />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- conainer1 -->
+    <div class="container" style="padding-bottom: 155px">
+      <div class="label">
+        <p>양식장 그룹</p>
+        <button id="edit_active" class="btnS_LGray_small">편집</button>
+        <button id="edit_remove" class="btnS_LGray_small" hidden>삭제</button>
+      </div>
+
+      <!-- <div class="fullScreen">
+        <img src="/images/delete-folder.png" alt="no_file" />
+        <p style="text-align: center">등록한 그룹이 없습니다.</p>
+      </div> -->
+
+      <table class="oneLinedTable">
+        <tr>
+          <th>
+            <input type="checkbox" hidden />
+            <p>그룹</p>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" hidden />
+            <p>A그룹</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" hidden />
+            <p>B그룹</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" hidden />
+            <p>C그룹</p>
+          </td>
+        </tr>
+      </table>
+
+      <div class="VSpacer"></div>
+
+      <table class="oneLinedTable">
+        <tr>
+          <th>
+            <input type="checkbox" hidden />
+            <p>어종별</p>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" hidden />
+            <p>흰다리새우</p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" hidden />
+            <p>가리비</p>
+          </td>
+        </tr>
+      </table>
+
+      <div class="fixedPosBtnwrapper">
+        <button class="btnS_gray_fullW">그룹 만들기</button>
+
+        <button class="btnS_black_fullW">그룹 만들기</button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/js/index.js"></script>
+</html>

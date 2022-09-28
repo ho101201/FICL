@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>마이양식장</title>
+  </head>
+  <body>
+    <div class="head">
+      <p>마이양식장</p>
+      <img class="iconL" src="/images/hamburger.png" alt="hamburger" />
+      <img class="iconR" src="/images/search.png" alt="search" />
+    </div>
+
+    <!-- 상단 탭 -->
+    <div class="tab_menu">
+      <ul class="btnList">
+        <li class="tabBtn active">
+          <a> 양식장현황 </a>
+          <div></div>
+        </li>
+        <li class="tabBtn">
+          <a> 퀘스트 </a>
+          <div></div>
+        </li>
+        <li class="tabBtn">
+          <a> 가계부 </a>
+          <div></div>
+        </li>
+      </ul>
+
+      <div class="tab_inner_wrap">
+        <!-- 양식장현황 -->
+        <div class="tab_inner active">
+          <div class="VSpacer"></div>
+          <!-- container1 -->
+          <div class="rowCalendar">
+            <div class="YMSelector">
+              <div>
+                <select class="year">
+                  <option value="2022">2022년</option>
+                  <option value="2021">2021년</option>
+                  <option value="2020">2020년</option>
+                </select>
+                <select class="month">
+                  <option value="9">9월</option>
+                  <option value="8">8월</option>
+                  <option value="7">7월</option>
+                </select>
+              </div>
+
+              <button class="btnS_black">오늘</button>
+            </div>
+
+            <div class="DSelector">
+              <div>
+                <p>일</p>
+                <p>1</p>
+              </div>
+              <div>
+                <p>월</p>
+                <p>2</p>
+              </div>
+              <div>
+                <p>화</p>
+                <p>3</p>
+              </div>
+              <div class="selected">
+                <p>수</p>
+                <p>4</p>
+              </div>
+              <div>
+                <p>목</p>
+                <p>5</p>
+              </div>
+              <div>
+                <p>금</p>
+                <p>6</p>
+              </div>
+              <div>
+                <p>토</p>
+                <p>7</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- container2 -->
+          <div class="contWrap">
+            <select class="centerAlinedDropdown">
+              <option value="1">그룹별</option>
+              <option value="2">수조동별</option>
+              <option value="3">상태별</option>
+            </select>
+          </div>
+
+          <!-- container3 -->
+          <div class="nurseryStatus">
+            <div class="totalStatus">
+              <div>
+                <div class="normal">18</div>
+                <p>정상</p>
+                <div class="alert">4</div>
+                <p>주의</p>
+                <div class="danger">2</div>
+                <p>위험</p>
+              </div>
+              <button class="btnS_black">그룹관리</button>
+            </div>
+          </div>
+
+          <div class="nurseryGroup">
+            <hr />
+            <p>A그룹</p>
+            <div>
+              <div class="normal">1-1</div>
+              <div class="alert">1-2</div>
+              <div class="normal">1-3</div>
+              <div class="normal">1-4</div>
+              <div class="normal">1-5</div>
+              <div class="normal">1-6</div>
+              <div class="normal">1-7</div>
+              <div class="alert">1-8</div>
+              <div class="normal">1-9</div>
+              <div class="normal">1-10</div>
+              <div class="normal">1-11</div>
+              <div class="danger">1-12</div>
+            </div>
+          </div>
+
+          <div class="nurseryGroup">
+            <hr />
+            <p>B그룹</p>
+            <div>
+              <div class="normal">2-1</div>
+              <div class="alert">2-2</div>
+              <div class="normal">2-3</div>
+              <div class="normal">2-4</div>
+              <div class="normal">2-5</div>
+              <div class="normal">2-6</div>
+              <div class="normal">2-7</div>
+              <div class="alert">2-8</div>
+              <div class="normal">2-9</div>
+              <div class="normal">2-10</div>
+              <div class="normal">2-11</div>
+              <div class="danger">2-12</div>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="tab_inner">탭 컨텐츠입니다2.</div>
+        <!--  -->
+        <div class="tab_inner">탭 컨텐츠입니다3.</div>
+      </div>
+    </div>
+
+    <!-- 관리 버튼 -->
+    <div id="FB_mng" class="floating-btn" onclick="toggleImg()">
+      <div>
+        <img id="mng" src="/images/floatingBtn-mng/management.png" alt="mng" />
+        <!-- <img id="exit" src="/images/floatingBtn-mng/X.png" alt="mng" /> -->
+        <a>관리</a>
+      </div>
+    </div>
+
+    <div style="height: 80px; margin-bottom: 20px"></div>
+    <!-- 하단 탭바 -->
+    <div class="botTabBar">
+      <div>
+        <img src="/images/tabbar/home.png" alt="home" />
+        <a>홈</a>
+      </div>
+      <div class="active">
+        <img src="/images/tabbar/fishC.png" alt="myNursery" />
+        <a>마이양식장</a>
+      </div>
+      <div>
+        <img src="/images/tabbar/user-circle.png" alt="user" />
+        <a>나의 계정</a>
+      </div>
+      <div>
+        <img src="/images/tabbar/cart.png" alt="cart" />
+        <a>구매하기</a>
+      </div>
+      <div>
+        <img src="/images/tabbar/document.png" alt="report" />
+        <a>리포트</a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/js/index.js"></script>
+</html>
