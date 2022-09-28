@@ -781,6 +781,7 @@ th {
 }
 .oneLinedTable p {
   margin: 0 5px 0 5px;
+  background: none;
 }
 .oneLinedTable input {
   width: 18px;
