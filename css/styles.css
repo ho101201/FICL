@@ -24,9 +24,15 @@ body {
 
   background-color: #f6f6f6;
 }
+a {
+  text-decoration: none;
+  color: #404152;
+}
 
 p {
   color: #404152;
+  font-size: 14px;
+  font-weight: 400px;
 }
 
 .container {
@@ -38,6 +44,9 @@ p {
 
   background: #fff;
   padding: 0px 20px 20px 20px;
+}
+._noLabel {
+  padding: 20px;
 }
 
 .container .HStack {
@@ -88,6 +97,10 @@ p {
 
 hr {
   color: #d9d9d9;
+}
+
+._fullW {
+  width: 100%;
 }
 
 /* 버튼 스타일 */
@@ -151,6 +164,13 @@ button {
 
   width: 100%;
 }
+.btnS_white_rounded {
+  background: #f5f5f5;
+  border-radius: 15px;
+  min-width: 200px;
+  height: 30px;
+}
+/* btnS_small */
 .btnS_black_small {
   font-size: 14px;
   font-weight: 500;
@@ -174,12 +194,43 @@ button {
   height: 30px;
 }
 
+.btnS_white_small {
+  font-size: 14px;
+  font-weight: 500;
+  outline: 1px solid #c2c2c2;
+  border-radius: 4px;
+  background: #fff;
+
+  min-width: 80px;
+  height: 30px;
+}
+
+.btnS_blue_small {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  outline: 1px solid #02a5d3;
+  border-radius: 4px;
+  background: #08baed;
+
+  /* min-width: 105px; */
+  height: 30px;
+}
+
 /* 가로정렬 */
 .rowStartWrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.rowCenterWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   gap: 10px;
 }
@@ -346,6 +397,7 @@ input:focus {
 .tabBtn a {
   color: #404152;
   font-weight: 500;
+  font-size: 16px;
   opacity: 0.5;
 }
 .tabBtn div {
@@ -440,6 +492,7 @@ input:focus {
 /* 하단 탭바 */
 .botTabBar {
   position: fixed;
+  z-index: 99;
   bottom: 0;
 
   /* display: flex;
@@ -473,7 +526,7 @@ input:focus {
 }
 
 /* 모달 창 */
-.modalWrapper {
+.modalBoxWrapper {
   display: none;
 
   position: absolute;
@@ -683,6 +736,7 @@ input:focus {
   gap: 10px;
 
   outline: 1px solid #d9d9d9;
+  border-collapse: collapse;
   height: 75px;
 }
 .simpleGrid1 div p {
@@ -703,7 +757,7 @@ input:focus {
   border-radius: 4px;
   overflow: hidden;
 }
-.simpleGrid2 div {
+.simpleGrid2 > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -711,14 +765,59 @@ input:focus {
 
   gap: 10px;
 
-  height: 75px;
   outline: 1px solid #d9d9d9;
 }
-.simpleGrid2 div > :first-child {
+.simpleGrid2 .standard {
+  min-height: 75px;
+}
+.simpleGrid2 .standard > :first-child {
+  font-weight: 700;
+  font-size: 16px;
+}
+.simpleGrid2 .standard > :last-child {
+  font-size: 12px;
+}
+
+.simpleGrid2 .gridTSizeN {
+  font-weight: 400;
+  font-size: 12px;
+  gap: 5px;
+  min-height: 75px;
+}
+.simpleGrid2 .gridTSizeB {
+  font-weight: 700;
+  font-size: 16px;
+  gap: 5px;
+  min-height: 75px;
+}
+.simpleGrid2 .fullCol {
+  grid-column: 1 / span 3;
+  grid-row: span;
+  width: 100%;
+
+  padding: 14px;
+
+  /* padding: 0 15px 0 15px; */
+}
+.simpleGrid2 .fullCol .gridlabel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* background: gray; */
+
+  padding-bottom: 0;
+
+  width: 100%;
+}
+.fullCol .gridlabel:first-child {
+  font-size: 16px;
   font-weight: 700;
 }
-.simpleGrid2 > div > :last-child {
-  font-size: 12;
+
+.fullCol > div {
+  outline: none;
+  /* padding: 14px; */
 }
 
 /* 카드형 그리드 */
@@ -817,6 +916,85 @@ th {
   position: absolute;
 
   left: 16px;
+}
+
+/* 아코디언 */
+.accorWrapper {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+}
+
+.accorClip {
+  position: relative;
+  padding: 7px 20px 7px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #d9d9d9;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.accorClip .tag_black {
+  color: white;
+  background: #404152;
+  border: #323343;
+}
+
+.accorClip::before {
+  display: inline-block;
+  font-size: 14px;
+  color: #006633;
+  margin: 0 5px;
+}
+
+.accorClip.on > span {
+  font-weight: bold;
+  color: #006633;
+}
+
+.accorWrapper .accorClip:last-of-type {
+  border-bottom: none;
+  background: #000;
+}
+
+.accorContent {
+  display: none;
+  overflow: hidden;
+  font-size: 14px;
+  background-color: #f4f4f2;
+  padding: 27px 0;
+}
+
+.accorContent::before {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  margin: 0 5px;
+}
+
+.arrow-wrap {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+}
+
+.accorClip .arrow-top {
+  display: none;
+}
+.accorClip .arrow-bottom {
+  display: block;
+}
+.accorClip.on .arrow-bottom {
+  display: none;
+}
+.accorClip.on .arrow-top {
+  display: block;
 }
 
 /* -------------------화면 별도 스타일링 */
@@ -1198,6 +1376,164 @@ input {
 }
 .foodList :nth-child(2n + 0) {
   background: #f5f5f5;
+}
+
+/* 마이페이지_퀘스트 */
+.patternBg {
+  background: #fff;
+  width: 100%;
+  height: 455px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.patternBg > :nth-child(n) {
+  position: absolute;
+}
+.patternBg {
+  font-weight: 700;
+}
+.patternBg .textAssemble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.greenCircle {
+}
+.styledBtn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+.styledBtn div {
+  width: 100%;
+  height: 60px;
+  background: #404152;
+  border-radius: 10px;
+}
+.styledBtn a {
+  position: absolute;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  right: 50px;
+}
+/* 마이페이지_퀘스트_진행 */
+.railBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  gap: 8px;
+
+  position: relative;
+  width: 100%;
+}
+.railBoxWrapper .rail {
+  width: 2px;
+  height: calc(100% - 10px);
+  position: absolute;
+  left: 9px;
+
+  margin-top: 5px;
+
+  background: #d9d9d9;
+  opacity: 0.4;
+  z-index: 0;
+}
+.railBoxWrapper .railBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+
+  width: 100%;
+  z-index: 1;
+}
+.railBox .circleWrapper_black {
+  width: 20px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circleWrapper_black > div {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background: #000;
+}
+.railBox .circleWrapper_blue {
+  width: 20px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circleWrapper_blue > div {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: #08baed;
+}
+/*  */
+.railBox > p {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* 말풍선 왼쪽 꼬리*/
+.pull {
+  position: relative;
+
+  width: 100px;
+
+  margin-left: 5px;
+  padding: 10px;
+
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background-color: #fff;
+
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+}
+.pull:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 100%;
+  /* margin-top: -5px; */
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+.pull:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: calc(100% + 1px);
+  /* margin-top: -5px; */
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #d9d9d9 transparent transparent;
+}
+
+.pull > :first-child {
+  font-size: 10px;
 }
 
 /* 반응형 */

@@ -54,3 +54,22 @@ $(document).ready(function () {
     $("#img2").hide();
   });
 });
+
+// 반원
+// let canvas = document.querySelector("canvas");
+// var ctx = canvas.getContext("2d");
+// ctx.beginPath();
+// ctx.arc(50, 50, 40, Math.PI * 0.5, Math.PI * 1.5);
+// ctx.rotate(Math.PI / 2);
+// ctx.stroke();
+
+// 아코디언
+let accorClip = document.getElementsByClassName("accorClip");
+{
+  accorClip !== null &&
+    $(accorClip).click(function () {
+      $(this).next(".accorContent").stop().slideToggle(300);
+      $(this).toggleClass("on").siblings().removeClass("on");
+      $(this).next(".accorContent").siblings(".accorContent").slideUp(300); // 1개씩 펼치기
+    });
+}

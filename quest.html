@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>퀘스트 진행</title>
+  </head>
+  <body>
+    <div class="head">
+      <p>마이양식장</p>
+      <img class="iconL" src="./images/hamburger.png" alt="hamburger" />
+      <img class="iconR" src="./images/search.png" alt="search" />
+    </div>
+
+    <!-- 상단 탭 -->
+    <div class="tab_menu">
+      <ul class="btnList">
+        <li class="tabBtn">
+          <a href="./myNursery.html"> 양식장현황 </a>
+          <div></div>
+        </li>
+        <li class="tabBtn active">
+          <a> 퀘스트 </a>
+          <div></div>
+        </li>
+        <li class="tabBtn">
+          <a> 가계부 </a>
+          <div></div>
+        </li>
+      </ul>
+
+      <div class="tab_inner_wrap">
+        <!-- 양식장현황 -->
+        <div class="tab_inner"></div>
+
+        <!-- 퀘스트 -->
+        <div class="tab_inner active">
+          <div class="rowEndWrapper">
+            <button class="btnS_white_small">퀘스트 추가</button>
+          </div>
+
+          <div class="container">
+            <div class="VSpacer" style="height: 20px"></div>
+            <div class="simpleGrid2">
+              <div class="gridTSizeN">
+                <p style="display: none"></p>
+                <p>양식장 준비</p>
+                <p>22.08.26</p>
+              </div>
+              <div class="gridTSizeB">
+                <p>퀘스트 1</p>
+                <p>D - 23</p>
+              </div>
+              <div class="standard"></div>
+              <!--  -->
+              <div class="fullCol">
+                <div class="gridlabel">
+                  <p>오늘의 할일</p>
+                  <a
+                    style="font-size: 12px; font-weight: 400"
+                    href="/questViewAll.html"
+                    >전체보기 ></a
+                  >
+                </div>
+
+                <div class="railBoxWrapper">
+                  <!-- 조건문으로 height 조정 필요 -->
+                  <div class="rail"></div>
+                  <!--  -->
+                  <div class="railBox">
+                    <div class="circleWrapper_black">
+                      <div></div>
+                    </div>
+
+                    <p>수조의 수질을 체크해주세요.</p>
+                  </div>
+
+                  <div class="railBox">
+                    <div class="circleWrapper_blue">
+                      <div></div>
+                    </div>
+
+                    <div class="pull">
+                      <p>양식장 세팅 > 청소 및 소독</p>
+                      <p>
+                        양식장에 사용 될 장비와 도구를 청소 후 소독해 주세요.
+                      </p>
+                      <div class="rowCenterWrapper">
+                        <button class="btnS_LGray_small _fullW">
+                          메뉴얼보기
+                        </button>
+                        <button class="btnS_LGray_small _fullW">
+                          사료급이표
+                        </button>
+                      </div>
+
+                      <hr />
+
+                      <div class="rowCenterWrapper">
+                        <button
+                          class="btnS_black_small _fullW"
+                          style="min-width: 0"
+                        >
+                          넘어가기
+                        </button>
+                        <button
+                          class="btnS_black_small _fullW"
+                          style="min-width: 0"
+                        >
+                          정지
+                        </button>
+                        <button
+                          class="btnS_blue_small _fullW"
+                          style="min-width: 0"
+                        >
+                          퀘스트달성
+                        </button>
+                      </div>
+
+                      <div class="VSpacer"></div>
+                    </div>
+                  </div>
+
+                  <div class="railBox">
+                    <div class="circleWrapper_black">
+                      <div></div>
+                    </div>
+
+                    <p>수조의 수질을 체크해주세요.</p>
+                  </div>
+
+                  <div class="railBox">
+                    <div class="circleWrapper_black">
+                      <div></div>
+                    </div>
+
+                    <p>수조에 첨가제 ooo을 투입해주세요.</p>
+                  </div>
+                  <div class="railBox">
+                    <div class="circleWrapper_black">
+                      <div></div>
+                    </div>
+
+                    <p>수조의 수질을 체크해주세요.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="VSpacer"></div>
+
+          <div class="container">
+            <div class="VSpacer" style="height: 20px"></div>
+            <div class="simpleGrid2">
+              <div class="gridTSizeN">
+                <p style="display: none"></p>
+                <p>양식장 준비</p>
+                <p>22.08.26</p>
+              </div>
+              <div class="gridTSizeB">
+                <p>퀘스트 2</p>
+                <p>D - 43</p>
+              </div>
+              <div class="standard"></div>
+              <!--  -->
+              <div class="fullCol">
+                <div class="gridlabel">
+                  <p>오늘의 할일</p>
+                  <a
+                    style="font-size: 12px; font-weight: 400"
+                    href="/questViewAll.html"
+                    >전체보기 ></a
+                  >
+                </div>
+
+                <div class="railBoxWrapper">
+                  <!-- 조건문으로 height 조정 필요 -->
+                  <div class="rail"></div>
+                  <!--  -->
+                  <div class="railBox">
+                    <div class="circleWrapper_black">
+                      <div></div>
+                    </div>
+
+                    <p>수조의 수질을 체크해주세요.</p>
+                  </div>
+
+                  <div class="railBox">
+                    <div class="circleWrapper_blue">
+                      <div></div>
+                    </div>
+
+                    <div class="pull">
+                      <p>양식장 세팅 > 청소 및 소독</p>
+                      <p>
+                        양식장에 사용 될 장비와 도구를 청소 후 소독해 주세요.
+                      </p>
+                      <div class="rowCenterWrapper">
+                        <button class="btnS_LGray_small _fullW">
+                          메뉴얼보기
+                        </button>
+                        <button class="btnS_LGray_small _fullW">
+                          사료급이표
+                        </button>
+                      </div>
+
+                      <hr />
+
+                      <div class="rowCenterWrapper">
+                        <button
+                          class="btnS_black_small _fullW"
+                          style="min-width: 0"
+                        >
+                          넘어가기
+                        </button>
+                        <button
+                          class="btnS_black_small _fullW"
+                          style="min-width: 0"
+                        >
+                          정지
+                        </button>
+                        <button
+                          class="btnS_blue_small _fullW"
+                          style="min-width: 0"
+                        >
+                          퀘스트달성
+                        </button>
+                      </div>
+
+                      <div class="VSpacer"></div>
+                    </div>
+                  </div>
+
+                  <div class="railBox">
+                    <div class="circleWrapper_black">
+                      <div></div>
+                    </div>
+
+                    <p>수조의 수질을 체크해주세요.</p>
+                  </div>
+
+                  <div class="railBox">
+                    <div class="circleWrapper_black">
+                      <div></div>
+                    </div>
+
+                    <p>수조에 첨가제 ooo을 투입해주세요.</p>
+                  </div>
+                  <div class="railBox">
+                    <div class="circleWrapper_black">
+                      <div></div>
+                    </div>
+
+                    <p>수조의 수질을 체크해주세요.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 가계부 -->
+        <div class="tab_inner"></div>
+      </div>
+    </div>
+
+    <div style="height: 80px; margin-bottom: 20px"></div>
+    <!-- 하단 탭바 -->
+    <div class="botTabBar">
+      <div>
+        <img src="./images/tabbar/home.png" alt="home" />
+        <a>홈</a>
+      </div>
+      <div class="active">
+        <img src="./images/tabbar/fishC.png" alt="myNursery" />
+        <a>마이양식장</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/user-circle.png" alt="user" />
+        <a>나의 계정</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/cart.png" alt="cart" />
+        <a>구매하기</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/document.png" alt="report" />
+        <a>리포트</a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/js/index.js"></script>
+</html>
