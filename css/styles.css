@@ -33,6 +33,11 @@ p {
   color: #404152;
   font-size: 14px;
   font-weight: 400px;
+  word-break: keep-all;
+}
+
+button {
+  word-break: keep-all;
 }
 
 .container {
@@ -86,6 +91,9 @@ p {
   width: 100%;
   height: 30px;
 }
+.label.alignCenter {
+  justify-content: center;
+}
 
 .spacer {
   flex-grow: 1;
@@ -94,9 +102,21 @@ p {
 .VSpacer {
   height: 10px;
 }
+.HSpacer {
+  flex-grow: 1;
+}
 
 hr {
-  color: #d9d9d9;
+  background: #d9d9d9;
+  border: 0px;
+  height: 1px;
+}
+/* hr 안보일 때 사용 */
+.Hline {
+  background: #d9d9d9;
+  width: 100%;
+  border: 0px;
+  height: 1px;
 }
 
 ._fullW {
@@ -131,14 +151,14 @@ button {
   width: 100%;
 }
 .btnS_LGray {
-  font-weight: 500;
+  font-weight: 600;
   outline: 1px solid #c2c2c2;
   border-radius: 4px;
   background: #ebebeb;
   height: 40px;
 }
 .btnS_LGray_fullW {
-  font-weight: 500;
+  font-weight: 600;
   outline: 1px solid #c2c2c2;
   border-radius: 4px;
   background: #ebebeb;
@@ -169,6 +189,15 @@ button {
   border-radius: 15px;
   min-width: 200px;
   height: 30px;
+}
+/*   // 자동사료급이기 */
+.box_white_fullRounded {
+  background: #f5f5f5;
+  border-radius: 20px;
+  height: 40px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 40px;
 }
 /* btnS_small */
 .btnS_black_small {
@@ -242,6 +271,14 @@ button {
 
   padding: 10px 20px 10px 20px;
 }
+/* 세로정렬 */
+.colWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
 
 /* 화면에 고정 */
 .fixedPosBtnwrapper {
@@ -269,7 +306,7 @@ select {
   /*  */
   background-color: #fff;
   font-size: 14px;
-  padding: 0 12px 0 12px;
+  padding: 0 24px 0 12px;
   height: 40px;
   min-width: 60px;
 }
@@ -316,10 +353,33 @@ input[type="checkbox"] {
 
   margin: 0;
 }
-input:focus {
-  /* background-color: #0cab7c; */
-  outline: 1px solid #323343;
+/*radio 버튼 색상변경 */
+input[type="radio"] {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #bdbdbd;
+  border-radius: 50%;
+  outline: none;
+  background: #fff;
 }
+input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+input[type="radio"]:checked:before {
+  background: #08baed;
+}
+
+/* input:focus {
+  background-color: #0cab7c;
+  outline: 1px solid #323343;
+} */
+
 .inputWithUnitWrapper {
   position: relative;
 }
@@ -437,11 +497,12 @@ input:focus {
 /* 탭2 */
 .btnList2 {
   display: flex;
+  padding: 0 20px 0 20px;
 }
 
 .tabBtn2 {
-  border: 1px solid #c2c2c2;
-  background: #ebebeb;
+  border: 1px solid #e6e6e6;
+  background: #f5f5f5;
   border-radius: 4px 4px 0 0;
 
   display: flex;
@@ -452,6 +513,7 @@ input:focus {
   height: 36px;
 }
 .tab_inner2_wrap {
+  padding: 20px;
 }
 
 .tab_inner2 {
@@ -460,11 +522,75 @@ input:focus {
 
 .tabBtn2.active {
   background: #fff;
+  border: 1px solid #c2c2c2;
   border-bottom: 1px solid #fff;
 }
 
 .tab_inner2.active {
   display: block;
+}
+/* 라디오 배치 */
+.radioBtnWrapper {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+}
+.radioBtnWrapper > div {
+  display: flex;
+  direction: row;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+.radioBtnWrapper > :last-child {
+  gap: 2px;
+}
+.radioContainer {
+  display: none;
+  padding: 16px 10px 16px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.radioContainer.active {
+  display: flex;
+}
+.radioContainer div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+
+  flex-grow: 1;
+
+  position: relative;
+  width: 100%;
+}
+.radioContainer div > p {
+  size: 14px;
+  font-weight: 700;
+}
+.radioContainer div > div {
+  width: 100%;
+  flex-grow: 1;
+}
+.radioContainer div > div > input {
+  padding-right: 10px;
+}
+.radioContainer div > div > p {
+  position: absolute;
+  line-height: 40px;
+  right: 10px;
 }
 
 /* 필드요소 */
@@ -840,7 +966,7 @@ input:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
 
   flex: auto;
   flex-basis: 0px;
@@ -848,7 +974,7 @@ input:focus {
 
   outline: 1px solid #d9d9d9;
   border-radius: 4px;
-  min-width: 100px;
+  min-width: 120px;
   height: 120px;
 }
 
@@ -856,7 +982,8 @@ input:focus {
 table {
   outline: 1px solid #d9d9d9;
   border-radius: 4px;
-  text-align: center;
+  /* text-align: center; */
+  vertical-align: center;
 
   overflow: hidden;
   width: 100%;
@@ -876,11 +1003,14 @@ table :last-child {
 th,
 td {
   height: 45px;
-  line-height: 45px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
 }
 th {
   font-weight: 700;
 }
+/*  */
 .oneLinedTable tr th {
   display: flex;
   flex-direction: row;
@@ -932,11 +1062,15 @@ th {
   padding: 7px 20px 7px 20px;
   cursor: pointer;
   font-size: 14px;
+  background: #ededed;
   border-bottom: 1px solid #d9d9d9;
 
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.accorClip > p {
+  font-weight: 700;
 }
 
 .accorClip .tag_black {
@@ -957,13 +1091,27 @@ th {
 .accorClip::before {
   display: inline-block;
   font-size: 14px;
-  color: #006633;
   margin: 0 5px;
 }
+/* 아코디연 클릭시 */
+.accorClip.on {
+  background: #fff;
+}
 
-.accorClip.on > span {
-  font-weight: bold;
-  color: #006633;
+.accorClip .arrowT {
+  display: none;
+}
+
+.accorClip .arrowB {
+  display: block;
+}
+
+.accorClip.on .arrowT {
+  display: block;
+}
+
+.accorClip.on .arrowB {
+  display: none;
 }
 
 .accorWrapper .accorClip:last-of-type {
@@ -975,8 +1123,11 @@ th {
   display: none;
   overflow: hidden;
   font-size: 14px;
-  background-color: #f4f4f2;
+  background-color: #fff;
   padding: 27px 0;
+}
+.accorContent > div {
+  padding: 0 15px 0 15px;
 }
 
 .accorContent::before {
@@ -1078,8 +1229,9 @@ th {
   justify-content: center;
   gap: 0.4em;
 }
-.totalStatus div p {
+.totalStatus div > p {
   margin-right: 0.6em;
+  font-weight: 400;
 }
 .totalStatus div div {
   width: 25px;
@@ -1087,16 +1239,14 @@ th {
   border-radius: 12.5px;
   text-align: center;
 }
+.totalStatus div .small {
+  width: 16px;
+  height: 16px;
+}
 
 .nurseryGroup {
   background: #fff;
   padding: 0 20px 20px 20px;
-}
-
-hr {
-  background: #d9d9d9;
-  border: 0;
-  height: 1px;
 }
 
 .nurseryGroup p {
@@ -1541,15 +1691,114 @@ input {
   border-style: solid;
   border-color: transparent #d9d9d9 transparent transparent;
 }
-
 .pull > :first-child {
   font-size: 10px;
+}
+.pull button {
+  padding: 0;
+}
+/* 퀘스트 달성 후 버튼 / 동일 간격 정렬 */
+.pull .rowGridWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* 장치제어 */
+.devCtrlLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  width: 100%;
+  padding: 12px 0 12px 0;
+}
+.devCtrlLabel :first-child {
+  font-weight: 700;
+  font-size: 16px;
+}
+.devCtrlLabel > p {
+  text-align: center;
+  word-break: keep-all;
+}
+.tankGrpCtrl :first-child {
+  size: 16px;
+  font-weight: 700;
+}
+.tankGrpCtrl > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 0 8px 0 8px;
+
+  width: 100%;
+  /* gap: 12px; */
+}
+.tankGrpCtrl > div > div {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 25px;
+}
+
+/* 장치제어_수조동_수조 */
+.deviceInfoWrapper {
+  width: 100%;
+  height: 150px;
+  background: #fff;
+  padding: 15px 20px 15px 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
+}
+.deviceInfoWrapper > :last-child {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  flex-grow: 1;
+  /* background: cyan; */
+}
+/* 장치제어 // 버튼 */
+.deviceInfoWrapper > :last-child > :first-child {
+  flex-grow: 1;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 10px;
+}
+.deviceInfoWrapper > :last-child > :first-child > :first-child {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* 장치제어 // 양액기 */
+.tipWrapper {
+  position: absolute;
+  right: 0;
+}
+.tipWrapper p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 2px;
 }
 
 /* 반응형 */
 @media screen and (max-width: 340px) {
   /* 버튼스타일 */
-  .btnS_black {
+  button {
     font-size: 12px;
   }
   /* 마이양식장 */
@@ -1557,6 +1806,13 @@ input {
     font-size: 12px;
   }
 
+  /* 라디오 버튼 간격*/
+  .radioBtnWrapper {
+    gap: 6px;
+  }
+  .radioBtnWrapper > div {
+    gap: 2px;
+  }
   /* 수조 뷰 페이지(수기입력) */
   /* 수조정보 */
   .simpleGrid1 div p {
@@ -1580,4 +1836,6 @@ input {
     flex-basis: 0;
     flex-grow: 2;
   }
+
+  /* 퀘스트 */
 }

@@ -17,111 +17,280 @@
     <div class="head">
       <!--  -->
       <p>퀘스트1</p>
-      <img class="iconL" src="./images/arrowL.png" alt="arrowL" />
+      <img
+        class="iconL"
+        src="./images/arrowL.png"
+        alt="arrowL"
+        onclick="location.href='./quest.html'"
+      />
     </div>
 
     <div class="VSpacer"></div>
 
     <!-- conainer1 -->
     <div class="container _noLabel">
-      <!-- 1 -->
+      <!-- 아코디언 -->
       <div class="accorWrapper">
+        <!-- 1 -->
         <div class="accorClip">
           <div class="tag_black">D-1</div>
           <p>치어입식</p>
+          <div class="HSpacer"></div>
           <div class="arrowWrap">
             <img
               src="./images/accordionArrowT.png"
               alt="arrowT"
-              style="display: none"
+              class="arrowT"
             />
-            <img src="./images/accordionArrowB.png" alt="arrowB" />
+            <img
+              src="./images/accordionArrowB.png"
+              alt="arrowB"
+              class="arrowB"
+            />
           </div>
         </div>
 
         <div class="accorContent">
           <div>
-            <p>aaaa</p>
+            <p>-</p>
           </div>
         </div>
+
         <!-- 2 -->
         <div class="accorClip">
-          <p>bbbb</p>
+          <div class="tag_black">D-20</div>
+          <p>본 양성장 이동</p>
+          <div class="HSpacer"></div>
+          <div class="arrowWrap">
+            <img
+              src="./images/accordionArrowT.png"
+              alt="arrowT"
+              class="arrowT"
+            />
+            <img
+              src="./images/accordionArrowB.png"
+              alt="arrowB"
+              class="arrowB"
+            />
+          </div>
         </div>
 
         <div class="accorContent">
-          <div class="railBoxWrapper">
-            <!-- 조건문으로 height 조정 필요 -->
-            <div class="rail"></div>
+          <div>
+            <!-- 퀘스트 진행중 -->
+            <div class="railBoxWrapper" style="display: none">
+              <!-- 레일 // 조건문으로 height 조정 필요 -->
+              <div class="rail"></div>
+              <!--  -->
+              <div class="railBox">
+                <div class="circleWrapper_black">
+                  <div></div>
+                </div>
+
+                <p>수조의 수질을 체크해주세요.</p>
+              </div>
+
+              <div class="railBox">
+                <div class="circleWrapper_blue">
+                  <div></div>
+                </div>
+
+                <div class="pull">
+                  <p>양식장 세팅 > 청소 및 소독</p>
+                  <p>양식장에 사용 될 장비와 도구를 청소 후 소독해 주세요.</p>
+                  <div class="rowCenterWrapper">
+                    <button class="btnS_LGray_small _fullW">메뉴얼보기</button>
+                    <button class="btnS_LGray_small _fullW">사료급이표</button>
+                  </div>
+
+                  <hr />
+
+                  <div class="rowCenterWrapper">
+                    <button
+                      class="btnS_black_small"
+                      style="min-width: 0; flex-grow: 1; flex-basis: 1"
+                    >
+                      넘어가기
+                    </button>
+                    <button
+                      class="btnS_black_small"
+                      style="min-width: 0; flex-grow: 1; flex-basis: 1"
+                    >
+                      정지
+                    </button>
+                    <button
+                      class="btnS_blue_small"
+                      style="min-width: 0; flex-grow: 1; flex-basis: 1"
+                    >
+                      퀘스트달성
+                    </button>
+                  </div>
+
+                  <div class="VSpacer"></div>
+                </div>
+              </div>
+
+              <div class="railBox">
+                <div class="circleWrapper_black">
+                  <div></div>
+                </div>
+
+                <p>수조의 수질을 체크해주세요.</p>
+              </div>
+
+              <div class="railBox">
+                <div class="circleWrapper_black">
+                  <div></div>
+                </div>
+
+                <p>수조에 첨가제 ooo을 투입해주세요.</p>
+              </div>
+              <div class="railBox">
+                <div class="circleWrapper_black">
+                  <div></div>
+                </div>
+
+                <p>수조의 수질을 체크해주세요.</p>
+              </div>
+            </div>
+
+            <!-- 퀘스트 달성 -->
+            <div class="railBoxWrapper">
+              <!-- 레일 // 조건문으로 height 조정 필요 -->
+              <div class="rail"></div>
+              <!--  -->
+              <div class="railBox">
+                <div class="circleWrapper_black">
+                  <div></div>
+                </div>
+
+                <p>수조의 수질을 체크해주세요.</p>
+              </div>
+
+              <div class="railBox">
+                <div class="circleWrapper_blue">
+                  <div></div>
+                </div>
+
+                <div class="pull">
+                  <p>양식장 세팅 > 청소 및 소독</p>
+                  <p>양식장에 사용 될 장비와 도구를 청소 후 소독해 주세요.</p>
+                  <div class="rowGridWrapper">
+                    <button class="btnS_LGray_small" style="flex-grow: 1">
+                      메뉴얼보기
+                    </button>
+                    <!-- <button class="btnS_LGray_small _fullW">사료급이표</button> -->
+                    <div style="flex-grow: 1"></div>
+                  </div>
+
+                  <hr />
+
+                  <div class="rowCenterWrapper">
+                    <button class="btnS_black_small _fullW">완료취소</button>
+                  </div>
+
+                  <div class="VSpacer"></div>
+                </div>
+              </div>
+
+              <div class="railBox">
+                <div class="circleWrapper_black">
+                  <div></div>
+                </div>
+
+                <p>수조의 수질을 체크해주세요.</p>
+              </div>
+
+              <div class="railBox">
+                <div class="circleWrapper_black">
+                  <div></div>
+                </div>
+
+                <p>수조에 첨가제 ooo을 투입해주세요.</p>
+              </div>
+              <div class="railBox">
+                <div class="circleWrapper_black">
+                  <div></div>
+                </div>
+
+                <p>수조의 수질을 체크해주세요.</p>
+              </div>
+            </div>
+
             <!--  -->
-            <div class="railBox">
-              <div class="circleWrapper_black">
-                <div></div>
-              </div>
-
-              <p>수조의 수질을 체크해주세요.</p>
-            </div>
-
-            <div class="railBox">
-              <div class="circleWrapper_blue">
-                <div></div>
-              </div>
-
-              <div class="pull">
-                <p>양식장 세팅 > 청소 및 소독</p>
-                <p>양식장에 사용 될 장비와 도구를 청소 후 소독해 주세요.</p>
-                <div class="rowCenterWrapper">
-                  <button class="btnS_LGray_small _fullW">메뉴얼보기</button>
-                  <button class="btnS_LGray_small _fullW">사료급이표</button>
-                </div>
-
-                <hr />
-
-                <div class="rowCenterWrapper">
-                  <button class="btnS_black_small _fullW" style="min-width: 0">
-                    넘어가기
-                  </button>
-                  <button class="btnS_black_small _fullW" style="min-width: 0">
-                    정지
-                  </button>
-                  <button class="btnS_blue_small _fullW" style="min-width: 0">
-                    퀘스트달성
-                  </button>
-                </div>
-
-                <div class="VSpacer"></div>
-              </div>
-            </div>
-
-            <div class="railBox">
-              <div class="circleWrapper_black">
-                <div></div>
-              </div>
-
-              <p>수조의 수질을 체크해주세요.</p>
-            </div>
-
-            <div class="railBox">
-              <div class="circleWrapper_black">
-                <div></div>
-              </div>
-
-              <p>수조에 첨가제 ooo을 투입해주세요.</p>
-            </div>
-            <div class="railBox">
-              <div class="circleWrapper_black">
-                <div></div>
-              </div>
-
-              <p>수조의 수질을 체크해주세요.</p>
-            </div>
           </div>
         </div>
 
         <!-- 3 -->
-        <div class="accorClip">ccccc</div>
+        <div class="accorClip">
+          <div class="tag_black">D-110</div>
+          <p>출하준비</p>
+          <div class="HSpacer"></div>
+          <div class="arrowWrap">
+            <img
+              src="./images/accordionArrowT.png"
+              alt="arrowT"
+              class="arrowT"
+            />
+            <img
+              src="./images/accordionArrowB.png"
+              alt="arrowB"
+              class="arrowB"
+            />
+          </div>
+        </div>
         <div class="accorContent">
-          <p>dummy!</p>
+          <div>
+            <p>-</p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="accorClip">
+          <div class="tag_black">D-120</div>
+          <p>출하</p>
+          <div class="HSpacer"></div>
+          <div class="arrowWrap">
+            <img
+              src="./images/accordionArrowT.png"
+              alt="arrowT"
+              class="arrowT"
+            />
+            <img
+              src="./images/accordionArrowB.png"
+              alt="arrowB"
+              class="arrowB"
+            />
+          </div>
+        </div>
+        <div class="accorContent">
+          <div>
+            <p>-</p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="accorClip">
+          <div class="tag_black">D-140</div>
+          <p>양식정리완료</p>
+          <div class="HSpacer"></div>
+          <div class="arrowWrap">
+            <img
+              src="./images/accordionArrowT.png"
+              alt="arrowT"
+              class="arrowT"
+            />
+            <img
+              src="./images/accordionArrowB.png"
+              alt="arrowB"
+              class="arrowB"
+            />
+          </div>
+        </div>
+        <div class="accorContent">
+          <div>
+            <p>-</p>
+          </div>
         </div>
       </div>
     </div>

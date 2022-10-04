@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>장치제어_자동사료급이기</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>자동사료급이기</p>
+      <img
+        class="iconL"
+        src="./images/arrowL.png"
+        alt="arrowL"
+        onclick="location.href=''"
+      />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container 1 -->
+    <div class="container">
+      <div class="label alignCenter">사료 급이시간</div>
+
+      <!-- 탭2 -->
+      <div class="tab_menu">
+        <ul class="btnList2">
+          <li class="tabBtn2 active">설정</li>
+          <li class="tabBtn2">제어기록</li>
+        </ul>
+        <!--  -->
+        <div class="tab_inner2_wrap">
+          <!-- 설정 -->
+          <div class="tab_inner2 active">
+            <!-- 예약급이 -->
+            <div class="radioBtnWrapper">
+              <div>
+                <input
+                  type="radio"
+                  name="feedingType"
+                  class="feedingType"
+                  value="recommand"
+                  checked
+                />
+                <p>예약급이</p>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="feedingType"
+                  class="feedingType"
+                  value="immediately"
+                />
+                <p>즉시급이</p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="radioContainer active">
+              <div>
+                <select class="_fullW">
+                  <option>사료선택</option>
+                </select>
+
+                <select class="_fullW">
+                  <option>구분</option>
+                </select>
+              </div>
+
+              <div>
+                <div>
+                  <input type="number" />
+                  <p>g</p>
+                </div>
+
+                <select
+                  class="_fullW"
+                  style="max-width: 72px"
+                  id="task_time_setting_H1"
+                >
+                  <option>00시</option>
+                </select>
+
+                <select
+                  class="_fullW"
+                  style="max-width: 72px"
+                  id="task_time_setting_M1"
+                >
+                  <option>00분</option>
+                </select>
+              </div>
+
+              <button class="btnS_LGray _fullW">삭제</button>
+
+              <div class="Hline"></div>
+
+              <div>
+                <select class="_fullW">
+                  <option>사료선택</option>
+                </select>
+
+                <select class="_fullW">
+                  <option>구분</option>
+                </select>
+              </div>
+
+              <div>
+                <div>
+                  <input type="number" />
+                  <p>g</p>
+                </div>
+
+                <select
+                  class="_fullW"
+                  style="max-width: 72px"
+                  id="task_time_setting_H2"
+                >
+                  <option>00시</option>
+                </select>
+
+                <select
+                  class="_fullW"
+                  style="max-width: 72px"
+                  id="task_time_setting_M2"
+                >
+                  <option>00분</option>
+                </select>
+              </div>
+
+              <button class="btnS_LGray _fullW">삭제</button>
+            </div>
+
+            <div class="VSpacer"></div>
+            <!-- 버튼 -->
+            <div class="colWrapper">
+              <button class="btnS_gray _fullW">급이추가</button>
+              <button class="btnS_black _fullW">저장</button>
+              <div class="box_white_fullRounded _fullW" id="alertBox">
+                최소 1개 이상의 급이를 등록해야 합니다.
+              </div>
+            </div>
+          </div>
+
+          <!-- 제어기록 -->
+          <div></div>
+          <div class="tab_inner2">
+            <table>
+              <tr>
+                <th>시간</th>
+                <th>설정</th>
+                <th>구분</th>
+                <th>내용</th>
+              </tr>
+              <tr>
+                <td>
+                  22.08.20 <br />
+                  09:00
+                </td>
+                <td>예약급이</td>
+                <td>사료 3호</td>
+                <td>+200g</td>
+              </tr>
+              <tr>
+                <td>09:10</td>
+                <td>즉시급이</td>
+                <td>사료 3호</td>
+                <td>+100g</td>
+              </tr>
+              <tr>
+                <td>10:30</td>
+                <td>급이설정</td>
+                <td>
+                  사료명 <br />
+                  구분값
+                </td>
+                <td>-50kg</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/js/index.js"></script>
+</html>

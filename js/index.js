@@ -73,3 +73,59 @@ let accorClip = document.getElementsByClassName("accorClip");
       $(this).next(".accorContent").siblings(".accorContent").slideUp(300); // 1개씩 펼치기
     });
 }
+
+// 라디오 // for문으로 수정 필요
+// 자동사료급이기
+{
+  document.getElementsByClassName("feedingType") !== null &&
+    $(document).ready(function () {
+      $('input[type="radio"][class="feedingType"]').on("click", function () {
+        let startSetting = $(
+          'input[type=radio][class="feedingType"]:checked'
+        ).val();
+        if (startSetting == "recommand") {
+          $("#task_time_setting_H1").css("opacity", "1");
+          $("#task_time_setting_M1").css("opacity", "1");
+          $("#task_time_setting_H2").css("opacity", "1");
+          $("#task_time_setting_M2").css("opacity", "1");
+          $("#alertBox").css("display", "block");
+        } else {
+          $("#task_time_setting_H1").css("opacity", "0");
+          $("#task_time_setting_M1").css("opacity", "0");
+          $("#task_time_setting_H2").css("opacity", "0");
+          $("#task_time_setting_M2").css("opacity", "0");
+          $("#alertBox").css("display", "none");
+        }
+      });
+    });
+}
+// 양액기
+{
+  document.getElementsByClassName("nutrientType") !== null &&
+    $(document).ready(function () {
+      $('input[type="radio"][class="nutrientType"]').on("click", function () {
+        let startSetting = $(
+          'input[type=radio][class="nutrientType"]:checked'
+        ).val();
+        if (startSetting == "recommand") {
+          $("#period1").css("display", "flex");
+          $("#period2").css("display", "flex");
+          $("#dltBtn1").css("display", "block");
+          $("#dltBtn2").css("display", "block");
+          $("#task_time_setting_H1").css("display", "block");
+          $("#task_time_setting_M1").css("display", "block");
+          $("#task_time_setting_H2").css("display", "block");
+          $("#task_time_setting_M2").css("display", "block");
+        } else {
+          $("#period1").css("display", "none");
+          $("#period2").css("display", "none");
+          $("#dltBtn1").css("display", "none");
+          $("#dltBtn2").css("display", "none");
+          $("#task_time_setting_H1").css("display", "none");
+          $("#task_time_setting_M1").css("display", "none");
+          $("#task_time_setting_H2").css("display", "none");
+          $("#task_time_setting_M2").css("display", "none");
+        }
+      });
+    });
+}
