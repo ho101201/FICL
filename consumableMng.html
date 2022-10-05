@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>장치제어_자동사료급이기</title>
+  </head>
+  <body>
+    <div class="head">
+      <img src="./images/logo-2.png" alt="smallLogo" />
+      <img class="iconL" src="./images/hamburger.png" alt="hamburger" />
+      <img class="iconR" src="./images/search.png" alt="search" />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container 1 -->
+    <div class="container">
+      <div class="label alignCenter">소모품관리</div>
+      <p style="text-align: center">
+        재고가 맞지 않을 경우 재고량을 수정해주세요.
+      </p>
+
+      <div class="VSpacer"></div>
+
+      <!-- 탭2 -->
+      <div class="tab_menu">
+        <ul class="btnList2">
+          <li class="tabBtn2 active">재고리스트</li>
+          <li class="tabBtn2">소진내역</li>
+        </ul>
+
+        <!--  -->
+        <div class="tab_inner2_wrap">
+          <!-- 재고리스트 -->
+          <div class="tab_inner2 active">
+            <div class="label">
+              <button class="btnS_black_small" style="min-width: 80px">
+                재고등록
+              </button>
+              <button class="btnS_LGray_small">삭제</button>
+            </div>
+
+            <!-- 소모품 목록 -->
+            <div class="simpleGrid0">
+              <!--  -->
+              <div class="consListContainer">
+                <div>
+                  <tab>[구분]</tab>
+                  <input type="checkbox" />
+                </div>
+
+                <p>제품명출력 … 최대 n Byte 출력 초과시 … 처리</p>
+
+                <div>
+                  <div class="rowStartWrapper">
+                    <p>현재 잔여량 :</p>
+                    <p>360kg</p>
+                  </div>
+                  <p>n 개 * n kg</p>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="consListContainer">
+                <div>
+                  <tab>[구분]</tab>
+                  <input type="checkbox" />
+                </div>
+                <p>제품명출력 … 최대 n Byte 출력 초과시 … 처리</p>
+
+                <div>
+                  <div class="rowStartWrapper">
+                    <p>현재 잔여량 :</p>
+                    <p>360kg</p>
+                  </div>
+                  <p>n 개 * n kg</p>
+                </div>
+              </div>
+              <!--  -->
+              <div class="consListContainer">
+                <div>
+                  <tab>[구분]</tab>
+                  <input type="checkbox" />
+                </div>
+                <p>제품명출력 … 최대 n Byte 출력 초과시 … 처리</p>
+
+                <div>
+                  <div class="rowStartWrapper">
+                    <p>현재 잔여량 :</p>
+                    <p>360kg</p>
+                  </div>
+                  <p>n 개 * n kg</p>
+                </div>
+              </div>
+              <!--   css 에서 마지막 요소 스타일 변경 안됨..-->
+              <div class="consListContainer">
+                <div>
+                  <tab>[구분]</tab>
+                  <input type="checkbox" />
+                </div>
+                <p>제품명출력 … 최대 n Byte 출력 초과시 … 처리</p>
+
+                <div>
+                  <div class="rowStartWrapper">
+                    <p>현재 잔여량 :</p>
+                    <p>360kg</p>
+                  </div>
+                  <p>n 개 * n kg</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 소진내역 -->
+
+          <div class="tab_inner2">
+            <div class="label">
+              <p style="font-size: 12px; font-weight: 400">
+                ※ 최대 5년의 재고 기록이 보관됩니다
+              </p>
+              <select class="miniDropdown">
+                <option>소진최신순</option>
+              </select>
+            </div>
+
+            <!-- 소모품 목록 -->
+            <div class="simpleGrid0">
+              <!--  -->
+              <div class="consListContainer">
+                <div>
+                  <tab>[구분]</tab>
+                  <input type="checkbox" />
+                </div>
+
+                <p>제품명출력 … 최대 n Byte 출력 초과시 … 처리</p>
+
+                <div>
+                  <div class="rowStartWrapper">
+                    <p></p>
+                    <p>소진일: YYYY.MM.DD</p>
+                  </div>
+                  <p>n 개 * n kg</p>
+                </div>
+              </div>
+
+              <!--  -->
+              <div class="consListContainer">
+                <div>
+                  <tab>[구분]</tab>
+                  <input type="checkbox" />
+                </div>
+                <p>제품명출력 … 최대 n Byte 출력 초과시 … 처리</p>
+
+                <div>
+                  <div class="rowStartWrapper">
+                    <p></p>
+                    <p>소진일: YYYY.MM.DD</p>
+                  </div>
+                  <p>n 개 * n kg</p>
+                </div>
+              </div>
+              <!--  -->
+              <div class="consListContainer">
+                <div>
+                  <tab>[구분]</tab>
+                  <input type="checkbox" />
+                </div>
+                <p>제품명출력 … 최대 n Byte 출력 초과시 … 처리</p>
+
+                <div>
+                  <div class="rowStartWrapper">
+                    <p></p>
+                    <p>소진일: YYYY.MM.DD</p>
+                  </div>
+                  <p>n 개 * n kg</p>
+                </div>
+              </div>
+              <!--  -->
+              <div class="consListContainer">
+                <div>
+                  <tab>[구분]</tab>
+                  <input type="checkbox" />
+                </div>
+                <p>제품명출력 … 최대 n Byte 출력 초과시 … 처리</p>
+
+                <div>
+                  <div class="rowStartWrapper">
+                    <p></p>
+                    <p>소진일: YYYY.MM.DD</p>
+                  </div>
+                  <p>n 개 * n kg</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 80px; margin-bottom: 20px"></div>
+    <!-- 하단 탭바 -->
+    <div class="botTabBar">
+      <div>
+        <img src="./images/tabbar/home.png" alt="home" />
+        <a>홈</a>
+      </div>
+      <div class="active">
+        <img src="./images/tabbar/fishC.png" alt="myNursery" />
+        <a>마이양식장</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/user-circle.png" alt="user" />
+        <a>나의 계정</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/cart.png" alt="cart" />
+        <a>구매하기</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/document.png" alt="report" />
+        <a>리포트</a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/js/index.js"></script>
+</html>

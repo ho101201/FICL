@@ -31,4 +31,19 @@ if (document.getElementById("cGrpModal") !== null) {
   modalBtn.addEventListener("click", () => {
     modal2.style.display = "none";
   });
+} else if (document.getElementById("consumableModal") !== null) {
+  // 소모품관리
+  let modal2 = document.getElementById("consumableModal");
+  console.log(modal2);
+  let openPopup2 = document.getElementById("openConsumableModal");
+
+  openPopup2.addEventListener("click", () => {
+    modal2.style.display = "flex";
+  });
+  closePopup.addEventListener("click", () => {
+    modal2.style.display = "none";
+  });
+  modalBtn.addEventListener("click", () => {
+    modal2.style.display = "none";
+  });
 }

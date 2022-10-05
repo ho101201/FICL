@@ -129,3 +129,23 @@ let accorClip = document.getElementsByClassName("accorClip");
       });
     });
 }
+
+// 소모품관리
+$(function () {
+  $("#toggle_id").bind("click", function () {
+    if ($("#toggle_id").val() == 0) {
+      $("#toggle_id").val(1);
+    } else {
+      $("#toggle_id").val(0);
+    }
+    let isHide = $("#toggle_id").val();
+    if (isHide == 1) {
+      // Button 숨기기
+      $();
+      $("#admin_id").hide();
+    } else {
+      // Button 보이기
+      $("#admin_id").show();
+    }
+  });
+});

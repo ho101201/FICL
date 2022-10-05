@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>먹이터</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>먹이터</p>
+      <img class="iconL" src="./images/arrowL.png" alt="arrowL" />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container 1 -->
+    <div class="container">
+      <div class="label alignCenter">
+        <p>먹이터 제어</p>
+      </div>
+
+      <div class="cardGrid">
+        <div style="padding: 10px; height: 140px">
+          <div class="inputWrapper">
+            <input type="number" />
+            <p>초</p>
+          </div>
+          <button class="btnS_LGray _fullW">상승</button>
+        </div>
+
+        <div style="padding: 10px; height: 140px">
+          <div class="inputWrapper">
+            <input type="number" />
+            <p>초</p>
+          </div>
+          <button class="btnS_LGray _fullW">하강</button>
+        </div>
+      </div>
+
+      <div class="VSpacer"></div>
+
+      <button class="btnS_black _fullW">저장</button>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/modalGrp.js"></script>
+</html>
