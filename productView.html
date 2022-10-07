@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>제품 view</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>KRILL 크릴(영양공급제)</p>
+      <img class="iconL" src="./images/arrowL.png" alt="arrowL" />
+      <span class="alarm_new">9+</span>
+      <img src="./images/cart.png" alt="cart" class="shoppingCartIcon" />
+    </div>
+
+    <div>
+      <img
+        src="./images/samples/sample_360x360.png"
+        alt="sample"
+        style="width: 100%"
+      />
+    </div>
+
+    <!-- container1 -->
+    <div class="container">
+      <p class="PTag">소모품/ 기자제</p>
+      <div class="PLabel">
+        <p>KRILL 크릴(영양공급제)</p>
+        <p>크릴 아미노산 제품(새우 육성에 필요한 영양공급제)</p>
+
+        <!--  -->
+        <div class="rowStartWrapper">
+          <p>50,000원</p>
+          <p>정상가 <del>80,000원</del></p>
+          <span>5%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container2 -->
+    <div class="container _noLabel">
+      <div class="infoContent">
+        <p class="accent">배송</p>
+        <p>
+          기본 배송비는 2500원 입니다. 부피에 따라 결제 시 배송비가 추가될 수
+          있습니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container3 -->
+    <div class="container">
+      <div class="label">
+        <p>제품정보</p>
+      </div>
+
+      <div class="infoContent">
+        <!-- 1 -->
+        <p>용도</p>
+        <p>- 저온효소 발효 가수 분해 크릴 아미노산 제품</p>
+
+        <!-- 2 -->
+        <p>효과</p>
+        <p>
+          - 천연 아미노산, 천연 비타민 미네랄 함유<br />
+          - 신진대사, 면역력 강화, 짐어 효과 극대화
+        </p>
+
+        <!-- 3 -->
+        <p>사용방법</p>
+        <p>
+          - 사료 톤당 본제 5리터를 배합하여 급여<br />
+          - 사료 한포당 100ml를 배합하여 급여
+        </p>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container4 -->
+    <div class="rowCenterWrapper" style="min-height: 185px; background: #fff">
+      <p style="text-align: center">
+        에디터작성<br />
+        상세페이지영역
+      </p>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container5 -->
+    <div class="container">
+      <div class="label">
+        <p>동일한 카테고리 제품</p>
+      </div>
+
+      <div class="rowStartWrapper HProductList">
+        <!-- map -->
+        <div>
+          <img src="./images/samples/sample.png" />
+          <p>제품 제목 최대2줄 출력 초과시… 처리</p>
+          <p>50,000원</p>
+        </div>
+
+        <div>
+          <img src="./images/samples/sample.png" />
+          <p>제품 제목 최대2줄 출력 초과시… 처리</p>
+          <p>50,000원</p>
+        </div>
+
+        <div>
+          <img src="./images/samples/sample.png" />
+          <p>제품 제목 최대2줄 출력 초과시… 처리</p>
+          <p>50,000원</p>
+        </div>
+
+        <div>
+          <img src="./images/samples/sample.png" />
+          <p>제품 제목 최대2줄 출력 초과시… 처리</p>
+          <p>50,000원</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 60px; margin-top: 10px"></div>
+    <!-- 하단 버튼 _구매하기 클릭 전-->
+    <div class="botBtnContainer">
+      <div>
+        <img src="./images/heart_red.png" alt="heart" />
+      </div>
+      <button class="btnS_black _fullW">구매하기</button>
+    </div>
+    <!-- 하단 버튼 _구매하기 클릭 후-->
+    <div class="botBtnContainer active">
+      <button class="btnS_gray _fullW">장바구니담기</button>
+      <span></span>
+      <button class="btnS_black _fullW">바로구매</button>
+    </div>
+
+    <!-- 구매하기 버튼 클릭시 -->
+    <div class="optionPopup">
+      <img src="./images/optionArrowB.png" alt="cancel" />
+      <!-- 옵션 컨테이너 -->
+      <div class="optContainer">
+        <!-- 1 -->
+        <div>
+          <p>옵션</p>
+          <div class="simpleGrid0">
+            <div>
+              <input type="checkbox" />
+              <p>
+                옵션명옵션명옵션명옵션명옵션명옵션명옵션명옵션명옵션명옵션명옵션명
+              </p>
+            </div>
+            <div>
+              <input type="checkbox" />
+              <p>옵션명</p>
+            </div>
+            <div>
+              <input type="checkbox" />
+              <p>옵션명</p>
+            </div>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div>
+          <p>추가 옵션</p>
+          <div class="simpleGrid0">
+            <div>
+              <input type="checkbox" />
+              <p>옵션명</p>
+            </div>
+            <div>
+              <input type="checkbox" />
+              <p>옵션명</p>
+            </div>
+            <div>
+              <input type="checkbox" />
+              <p>옵션명</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 제품 가격 -->
+      <div class="totalOptContainer">
+        <p>KRILL 크릴(영양공급제)</p>
+        <p>옵션명 / 추가옵션명</p>
+        <div>
+          <div class="calcBtn">
+            <button>-</button>
+            <p id="">1</p>
+            <button>+</button>
+          </div>
+          <p>50,000원</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>

@@ -11,7 +11,7 @@
       integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
       crossorigin="anonymous"
     ></script>
-    <title>소모품관리 뷰페이지(수정등록)</title>
+    <title>소모품관리 뷰페이지(수정/등록)</title>
   </head>
   <body>
     <div class="head">
@@ -94,6 +94,7 @@
         </div>
         <button class="btnS_gray_small">재고소진</button>
       </div>
+
       <div class="VSpacer"></div>
       <button
         class="btnS_black _fullW"
@@ -132,11 +133,73 @@
     <div id="consumableModal" class="modalBoxWrapper" style="padding-top: 20px">
       <div class="modal">
         <p>재고 추가 소진</p>
-        <div class="modalBody"></div>
-        <button class="modalConfBtn">닫기</button>
+        <div class="modalBody extraP" >
+            <div class="label rowBtwWrapper">
+              <p>투여한 수조</p>
+              <div style="display: flex; gap: 10px;">
+                <select class="miniDropdown">
+                  <option>그룹별</option>
+                </select>
+                <button class="btnS_LGray_small">해당없음</button>
+              </div>
+            </div>
+            <div class="modalTankGrp" >
+              <p>A그룹</p>
+              <div class="tankSelect">
+                <div>1-1</div>
+                <div>1-2</div>
+                <div>1-3</div>
+                <div>1-4</div>
+                <div>1-5</div>
+                <div>1-6</div>
+                <div>1-7</div>
+                <div>1-8</div>
+                <div>1-9</div>
+                <div>1-10</div>
+                <div>1-11</div>
+                <div >1-12</div>
+              </div>
+            </div>
+
+            <div class="modalGap"></div>
+
+            <div class="colWrapper modalContContainer">
+              <div class="rowCenterWrapper">
+                <p>현재 잔여량 :</p>
+                <p class="red">n 단위</p>
+              </div>
+              <div class="rowBtwWrapper">
+                <input type="number" placeholder="수조당 투여량 입력하세요" />
+                <p style="font-weight: 500;">단위</p>
+                <button class="btnS_gray" style="min-width: 80px; padding: 0;">계산하기</button>
+              </div>
+              <div class="Hline"></div>
+              <div class="rowCenterWrapper">
+                <p>변동값 :</p>
+                <p class="red">n 단위</p>
+              </div>
+            </div>
+
+            <div class="modalGap"></div>
+
+            <div class="rowBtwWrapper" style="height: 60px;">
+              <p>반영일자</p>
+              <div style="display: flex; gap: 10px;">
+                <input type="text" value="2022년 12월 31일" />
+                <button class="btnS_LGray" style="min-width: 80px;" >오늘일자</button>
+              </div>
+            </div>
+
+            <div class="VSpacer"></div>
+
+            <button class="btnS_black _fullW">변동내역 반영</button>
+
+          </div>
+          <button class="modalConfBtn">닫기</button>
+        </div>
       </div>
-      <img class="closePopup" src="./images/btn_x_white.png" alt="x" />
     </div>
+
   </body>
   <script type="text/javascript" src="./js/index.js"></script>
   <script type="text/javascript" src="./js/modalGrp.js"></script>

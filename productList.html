@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>제품리스트</title>
+  </head>
+  <body>
+    <div class="head">
+      <img src="./images/logo-2.png" alt="smallLogo" />
+      <img class="iconL" src="./images/hamburger.png" alt="hamburger" />
+      <img class="iconR" src="./images/search.png" alt="search" />
+    </div>
+
+    <!-- container1 -->
+    <div class="purchaseLabel">
+      <p>제품구매하기</p>
+
+      <span class="alarm_new">9+</span>
+      <img src="./images/cart.png" alt="cart" class="shoppingCartIcon" />
+
+      <!-- 내비게이션 스크롤  -->
+      <div class="rowStartWrapper ovfContainer">
+        <a class="checked">ALL</a>
+        <a>장비</a>
+        <a>컨트롤보드</a>
+        <a>먹이터</a>
+        <a>소모품</a>
+        <a>기타</a>
+      </div>
+    </div>
+
+    <!-- container2 -->
+    <div class="rowEndWrapper">
+      <select class="" style="max-width: 100px; width: 100%; height: 30px">
+        <option>인기순</option>
+        <option>추천순</option>
+        <option>낮은가격순</option>
+        <option>높은 가격순</option>
+      </select>
+    </div>
+
+    <div class="productList">
+      <!--  -->
+      <div class="product">
+        <img src="./images/samples/sample.png" />
+        <div>
+          <p>소모품/기자제</p>
+          <p>제품 제목 최대2줄 출력 초과시 … 처리</p>
+
+          <div>
+            <p>50,000원</p>
+            <p><del>80,000원</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="product">
+        <div class="soldout">
+          <span>품절</span>
+          <img src="./images/samples/sample.png" />
+        </div>
+        <div>
+          <p>소모품/기자제</p>
+          <p>제품 제목 최대2줄 출력 초과시 … 처리</p>
+          <div>
+            <p>50,000원</p>
+            <p><del>80,000원</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="product">
+        <img src="./images/samples/sample.png" />
+        <div>
+          <p>소모품/기자제</p>
+          <p>제품 제목 최대2줄 출력 초과시 … 처리</p>
+          <div>
+            <p>50,000원</p>
+            <p><del>80,000원</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="product">
+        <img src="./images/samples/sample.png" />
+        <div>
+          <p>소모품/기자제</p>
+          <p>제품 제목 최대2줄 출력 초과시 … 처리</p>
+          <div>
+            <p>50,000원</p>
+            <p><del>80,000원</del></p>
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="product">
+        <img src="./images/samples/sample.png" />
+        <div>
+          <p>소모품/기자제</p>
+          <p>제품 제목 최대2줄 출력 초과시 … 처리</p>
+          <div>
+            <p>50,000원</p>
+            <p><del>80,000원</del></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 80px; margin-bottom: 10px; bottom: 0"></div>
+    <!-- 하단 탭바 -->
+    <div class="botTabBar">
+      <div>
+        <img src="./images/tabbar/home.png" alt="home" />
+        <a>홈</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/fish.png" alt="myNursery" />
+        <a>마이양식장</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/user-circle.png" alt="user" />
+        <a>나의 계정</a>
+      </div>
+      <div class="active">
+        <img src="./images/tabbar/cartC.png" alt="cart" />
+        <a>구매하기</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/document.png" alt="report" />
+        <a>리포트</a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>
