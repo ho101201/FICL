@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>장바구니</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>장바구니</p>
+      <img class="iconL" src="./images/arrowL.png" alt="arrowL" />
+      <span class="alarm_new">9+</span>
+      <img src="./images/cart.png" alt="cart" class="shoppingCartIcon" />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container1 -->
+    <div class="container _noLabel">
+      <div class="rowBtwWrapper" style="margin-bottom: 5px">
+        <div class="rowStartWrapper">
+          <input type="checkbox" />
+          <p>전체선택</p>
+        </div>
+        <button class="btnS_LGray_small">선택삭제</button>
+      </div>
+
+      <!-- 장바구니 리스트 -->
+      <div class="simpleGrid0 _fullW purchaseListCont">
+        <!--  -->
+        <div class="purchaseList rowStartWrapper">
+          <input type="checkbox" />
+          <div class="">
+            <img src="./images/samples/sample.png" />
+            <div class="calcBtn">
+              <button>-</button>
+              <p id="">1</p>
+              <button>+</button>
+            </div>
+          </div>
+          <div></div>
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div>
+              <p>정상가 <del>80,000원</del></p>
+              <p>50,000원</p>
+            </div>
+          </div>
+          <img
+            src="./images/x.png"
+            alt="x"
+            style="position: absolute; right: 4px; top: 16px"
+          />
+        </div>
+
+        <!--  -->
+        <div class="purchaseList rowStartWrapper">
+          <input type="checkbox" />
+          <div class="">
+            <img src="./images/samples/sample.png" />
+            <div class="calcBtn">
+              <button>-</button>
+              <p id="">1</p>
+              <button>+</button>
+            </div>
+          </div>
+          <div></div>
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div>
+              <p>정상가 <del>80,000원</del></p>
+              <p>50,000원</p>
+            </div>
+          </div>
+          <img
+            src="./images/x.png"
+            alt="x"
+            style="position: absolute; right: 4px; top: 16px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <div class="container _noLabel">
+      <div class="colWrapper" style="gap: 6px">
+        <div class="rowBtwWrapper">
+          <p>제품합계</p>
+          <p>100,000원</p>
+        </div>
+
+        <div class="rowBtwWrapper">
+          <p>할인금액</p>
+          <p>-10,000원</p>
+        </div>
+
+        <div class="colWrapper">
+          <div class="rowBtwWrapper">
+            <p>배송비</p>
+            <p>50,000원</p>
+          </div>
+        </div>
+
+        <div class="VSpacer"></div>
+        <div class="Hline"></div>
+        <div class="VSpacer"></div>
+      </div>
+
+      <div class="colWrapper">
+        <div class="rowBtwWrapper">
+          <p style="font-weight: 700">결제금액</p>
+          <p style="font-weight: 700">92,500원</p>
+        </div>
+      </div>
+
+      <div></div>
+    </div>
+
+    <div style="height: 60px; margin-top: 10px"></div>
+    <!-- 하단 버튼 -->
+    <div id="bBtnC1" class="botBtnContainer active">
+      <button class="btnS_black _fullW" id="openOptionPopup">주문하기</button>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>

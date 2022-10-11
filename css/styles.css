@@ -16,7 +16,7 @@
 
 body {
   font-family: "Noto Sans KR";
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
 
   margin: "0";
@@ -40,6 +40,7 @@ p {
 }
 
 button {
+  font-family: "Noto Sans KR";
   word-break: keep-all;
 }
 
@@ -109,6 +110,10 @@ button {
 }
 .label.alignCenter {
   justify-content: center;
+}
+
+.accent {
+  font-weight: 700;
 }
 
 .spacer {
@@ -219,7 +224,7 @@ button {
 
 .btnS_LGray_small {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   outline: 1px solid #c2c2c2;
   border-radius: 4px;
   background: #ebebeb;
@@ -386,6 +391,11 @@ input::placeholder {
   top: 0;
   line-height: 40px;
 }
+.inputWrapper img {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
 .inputWithUnitWrapper {
   position: relative;
 }
@@ -395,6 +405,9 @@ input[type="checkbox"] {
   min-width: 18px;
   height: 18px;
   background: #fff;
+
+  border: 1px solid #bdbdbd;
+  border-radius: 0;
 
   margin: 0;
 }
@@ -906,8 +919,12 @@ input[type="radio"]:checked:before {
 
 /* 보더박스 */
 .simpleGrid0 {
+  position: relative;
   outline: 1px solid #d9d9d9;
   border-radius: 4px;
+}
+.simpleGrid0 > :last-of-type {
+  border: none;
 }
 /* 그리드 1 // 사용): 수조정보 등 */
 .simpleGrid1 {
@@ -1769,7 +1786,7 @@ input {
   padding: 0;
 }
 /* 퀘스트 달성 후 버튼 / 동일 간격 정렬 */
-.pull .rowGridWrapper {
+.rowGridWrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -2221,7 +2238,7 @@ input {
   position: fixed;
   bottom: 60px;
 
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 
@@ -2302,7 +2319,7 @@ input {
   align-items: center;
   justify-content: space-between;
 
-  width: 88px;
+  width: 86px;
   height: 22px;
 }
 .calcBtn > button {
@@ -2320,6 +2337,164 @@ input {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
+
+/* 장바구니 */
+.purchaseListCont {
+  padding: 0 10px 0 10px;
+}
+.purchaseList {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 15px 0 15px 0;
+
+  /* background: cyan; */
+}
+
+.purchaseList > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  height: 100%;
+  gap: 10px;
+}
+.purchaseList > div > img {
+  width: 86px;
+  height: 86px;
+}
+
+.purchaseList .info > :first-child {
+  font-weight: 600;
+}
+.purchaseList .info > :nth-child(2) {
+  font-size: 12px;
+  margin-top: -8px;
+}
+.purchaseList .info > :last-child > :first-child {
+  font-size: 12px;
+  color: #a9aab4;
+}
+.purchaseList .info > :last-child > :last-child {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* 주문완료 */
+.patterBg {
+  background-position: 50% 50%;
+  background-size: cover;
+  height: calc(100vh - 190px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.patterBg div :first-child {
+  font-size: 18px;
+  font-weight: 700;
+  text-align-last: center;
+}
+.patterBg div :nth-child(2) {
+  text-align: center;
+}
+
+/* 주문내역 */
+.ordHisDate :last-child {
+  color: #08baed;
+}
+
+.purchaseList2 {
+  position: relative;
+  width: 100%;
+  height: 117px;
+  border-bottom: 1px solid #d9d9d9;
+
+  padding: 15px 0 15px 0;
+
+  /* background: cyan; */
+}
+
+.purchaseList2 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  height: 100%;
+  /* gap: 10px; */
+}
+.purchaseList2 > div > img {
+  width: 86px;
+  height: 86px;
+}
+
+.purchaseList2 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.purchaseList2 .info > :first-child {
+  line-height: 18px;
+  font-weight: 600;
+}
+.purchaseList2 .info > :nth-child(2) {
+  font-size: 12px;
+  /* margin-top: -8px; */
+}
+.purchaseList2 .info > :last-child > :first-child {
+  font-size: 16px;
+  font-weight: 700;
+}
+.purchaseList2 .info > :last-child > .tag {
+  background: #f46242;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 35px;
+}
+.purchaseList2 .reOrder {
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
+
+  min-width: 50px;
+  min-height: 25px;
+  border-radius: 4px;
+  background: #0cab7c;
+  color: #fff;
+}
+.totalPrize {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 15px;
+  background: #fff;
+  width: 100%;
+  height: 30px;
+}
+.totalPrize p {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* 주문상세 */
+.ordHisDateDtl {
+  padding: 10px 20px 10px 20px;
+  height: 45px;
+}
+.ordHisDateDtl p {
+  font-size: 12px;
+}
+
 /* 반응형 */
 @media screen and (max-width: 340px) {
   /* 버튼스타일 */

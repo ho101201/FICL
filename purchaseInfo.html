@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>결제정보</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>결제정보</p>
+      <img class="iconL" src="./images/arrowL.png" alt="arrowL" />
+      <span class="alarm_new">9+</span>
+      <img src="./images/cart.png" alt="cart" class="shoppingCartIcon" />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container1 -->
+    <div class="container">
+      <div class="label">주문자 정보</div>
+      <input type="text" class="_fullW" value="홍길동  010-1234-7890" />
+      <p style="font-size: 12px; margin-top: 6px">
+        * 주문자정보 변경 시 마이페이지를 통해 변경이 가능합니다.
+      </p>
+
+      <div class="label">배송지 정보</div>
+      <div class="inputWrapper _fullW">
+        <input
+          type="text"
+          class="_fullW"
+          value="경상북도 김천시 어모면 어모로 584-6"
+        />
+        <img src="./images/arrowR.png" />
+      </div>
+
+      <div class="label">배송 메모</div>
+      <input type="text" style="overflow: auto" />
+      <!-- <textarea class="_fullW"></textarea> -->
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- component2 -->
+    <div class="container">
+      <div class="label">결제수단</div>
+      <!-- 라디오 -->
+      <div class="colWrapper">
+        <div class="rowStartWrapper">
+          <input
+            type="radio"
+            name="paymentMethod"
+            class="paymentMethod"
+            value="transfer"
+          />
+          <p>계좌이체 / 가상계좌</p>
+        </div>
+
+        <div class="rowGridWrapper _fullW">
+          <div class="rowStartWrapper">
+            <input
+              type="radio"
+              name="paymentMethod"
+              class="paymentMethod"
+              value="credit"
+            />
+            <p>신용/체크카드</p>
+          </div>
+
+          <select class="miniDropdown">
+            <option>선택</option>
+          </select>
+        </div>
+
+        <div class="rowGridWrapper _fullW">
+          <div class="rowStartWrapper">
+            <input
+              type="radio"
+              name="paymentMethod"
+              class="paymentMethod"
+              value="quick"
+            />
+            <p>간편결제</p>
+          </div>
+
+          <select class="miniDropdown">
+            <option>선택</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container3 -->
+    <div class="container">
+      <div class="label">
+        <p>결제금액</p>
+
+        <div class="_fullW"></div>
+
+        <div class="rowStartWrapper" style="justify-content: flex-end">
+          <p>11.500원</p>
+
+          <img src="./images/arrowB.png" alt="arroB" />
+        </div>
+      </div>
+      <div class="Hline"></div>
+      <div class="VSpacer"></div>
+
+      <div class="rowBtwWrapper">
+        <div class="rowBtwWrapper">
+          <div class="rowStartWrapper">
+            <input type="checkbox" />
+            <p>주문 및 결제 이용약관 동의</p>
+          </div>
+          <button class="btnS_LGray_small">약관보기</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 60px; margin-top: 10px"></div>
+    <!-- 하단 버튼 -->
+    <div id="bBtnC1" class="botBtnContainer active">
+      <button class="btnS_black _fullW" id="openOptionPopup">주문하기</button>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>

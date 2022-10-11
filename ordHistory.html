@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>주문내역</title>
+  </head>
+  <body>
+    <div class="head">
+      <img src="./images/logo-2.png" alt="smallLogo" />
+      <img class="iconL" src="./images/hamburger.png" alt="hamburger" />
+      <img class="iconR" src="./images/search.png" alt="search" />
+    </div>
+
+    <!-- container1 -->
+    <div class="container">
+      <div class="purchaseLabel">
+        <p style="height: 23px">주문내역</p>
+      </div>
+      <p style="text-align: center; font-size: 12px">
+        배송완료 후 7일 후에는 교환 및 반품이 불가능합니다.
+      </p>
+    </div>
+
+    <div class="rowEndWrapper">
+      <button class="btnS_white_small">기간검색</button>
+    </div>
+
+    <!-- container2 -->
+    <div class="container _noLabel">
+      <div class="rowBtwWrapper">
+        <div class="rowStartWrapper ordHisDate">
+          <p>YYYY-MM-DD</p>
+          <p>상태값</p>
+        </div>
+        <button
+          class="btnS_LGray_small"
+          onclick="location.href='./ordHistoryDtl.html'"
+        >
+          주문상세
+        </button>
+      </div>
+
+      <div class="VSpacer"></div>
+      <!--  -->
+      <div class="simpleGrid0 _fullW purchaseListCont">
+        <div class="purchaseList2 rowStartWrapper">
+          <div>
+            <img src="./images/samples/sample.png" />
+          </div>
+          <div></div>
+
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div class="rowStartWrapper">
+              <p>50,000원</p>
+              <!-- <p class="tag">5%</p> -->
+            </div>
+          </div>
+          <button class="reOrder">재주문</button>
+        </div>
+
+        <div class="purchaseList2 rowStartWrapper">
+          <div>
+            <img src="./images/samples/sample.png" />
+          </div>
+          <div></div>
+
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div class="rowStartWrapper">
+              <p>50,000원</p>
+              <!-- <p class="tag">5%</p> -->
+            </div>
+          </div>
+          <button class="reOrder">재주문</button>
+        </div>
+      </div>
+
+      <div class="totalPrize">
+        <p style="font-size: 16px">결제금액</p>
+        <p>11,500원</p>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container3 -->
+    <div class="container _noLabel">
+      <div class="rowBtwWrapper">
+        <div class="rowStartWrapper ordHisDate">
+          <p>YYYY-MM-DD</p>
+          <p>상태값</p>
+        </div>
+        <button class="btnS_LGray_small">주문상세</button>
+      </div>
+
+      <div class="VSpacer"></div>
+      <!--  -->
+      <div class="simpleGrid0 _fullW purchaseListCont">
+        <div class="purchaseList2 rowStartWrapper">
+          <div>
+            <img src="./images/samples/sample.png" />
+          </div>
+          <div></div>
+
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div class="rowStartWrapper">
+              <p>50,000원</p>
+              <!-- <p class="tag">5%</p> -->
+            </div>
+          </div>
+          <button class="reOrder">재주문</button>
+        </div>
+
+        <div class="purchaseList2 rowStartWrapper">
+          <div>
+            <img src="./images/samples/sample.png" />
+          </div>
+          <div></div>
+
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div class="rowStartWrapper">
+              <p>50,000원</p>
+              <!-- <p class="tag">5%</p> -->
+            </div>
+          </div>
+          <button class="reOrder">재주문</button>
+        </div>
+      </div>
+
+      <div class="totalPrize">
+        <p style="font-size: 16px">결제금액</p>
+        <p>11,500원</p>
+      </div>
+    </div>
+
+    <div style="height: 80px; margin-bottom: 10px; bottom: 0"></div>
+    <!-- 하단 탭바 -->
+    <div class="botTabBar">
+      <div>
+        <img src="./images/tabbar/home.png" alt="home" />
+        <a>홈</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/fish.png" alt="myNursery" />
+        <a>마이양식장</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/user-circle.png" alt="user" />
+        <a>나의 계정</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/cart.png" alt="cart" />
+        <a>구매하기</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/document.png" alt="report" />
+        <a>리포트</a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>

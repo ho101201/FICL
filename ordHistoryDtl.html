@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>주문상세</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>주문상세</p>
+      <img
+        class="iconL"
+        src="./images/arrowL.png"
+        alt="arrowL"
+        onclick="location.href='./ordHistory.html'"
+      />
+    </div>
+
+    <div class="rowBtwWrapper ordHisDateDtl">
+      <p>주문시간 : YYYY-MM-DD 00:00</p>
+      <p>주문번호: 00000000000</p>
+    </div>
+
+    <!-- container1 -->
+    <div class="container">
+      <div class="label">주문내역</div>
+
+      <!--  -->
+      <div class="simpleGrid0 _fullW purchaseListCont">
+        <div class="purchaseList2 rowStartWrapper">
+          <div>
+            <img src="./images/samples/sample.png" />
+          </div>
+          <div></div>
+
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div class="rowStartWrapper">
+              <p>50,000원</p>
+              <p class="tag">5%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="purchaseList2 rowStartWrapper">
+          <div>
+            <img src="./images/samples/sample.png" />
+          </div>
+          <div></div>
+
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div class="rowStartWrapper">
+              <p>50,000원</p>
+              <!-- <p class="tag">5%</p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container2 -->
+    <div class="container _noLabel">
+      <div class="rowBtwWrapper">
+        <p>상품합계</p>
+        <p>100,000원</p>
+      </div>
+      <div class="rowBtwWrapper">
+        <p>할인금액</p>
+        <p>-0원</p>
+      </div>
+      <div class="rowBtwWrapper">
+        <p>배송비</p>
+        <p>2,500원</p>
+      </div>
+      <div class="rowBtwWrapper accent">
+        <p>결제금액</p>
+        <p>102,500원</p>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container3 -->
+    <div class="container">
+      <div class="label">
+        <p>배송지</p>
+      </div>
+
+      <div class="infoContent" style="grid-template-columns: 100px 1fr">
+        <!--  -->
+        <p>수령인</p>
+        <p>홍길동</p>
+
+        <!--  -->
+        <p>연락처</p>
+        <p>010-1234-7890</p>
+
+        <!--  -->
+        <p>배송지 주소</p>
+        <p>경상북도 김천시 어모면 어모로 584-6</p>
+
+        <!--  -->
+        <p>배송메세지</p>
+        <p>벨을 눌러주세요.</p>
+      </div>
+    </div>
+
+    <div style="height: 200px; margin-top: 10px"></div>
+    <!-- 하단 버튼 -->
+    <div class="botBtnContainer active" style="bottom: 140px">
+      <button class="btnS_gray _fullW">교환/반품신청</button>
+      <button class="btnS_black _fullW">구매확정</button>
+    </div>
+    <div class="botBtnContainer active" style="bottom: 80px">
+      <button class="btnS_black _fullW" id="openOptionPopup">
+        구매확정 완료 (교환/반품불가)
+      </button>
+    </div>
+    <!-- 하단 탭바 -->
+    <div class="botTabBar">
+      <div>
+        <img src="./images/tabbar/home.png" alt="home" />
+        <a>홈</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/fish.png" alt="myNursery" />
+        <a>마이양식장</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/user-circle.png" alt="user" />
+        <a>나의 계정</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/cart.png" alt="cart" />
+        <a>구매하기</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/document.png" alt="report" />
+        <a>리포트</a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>

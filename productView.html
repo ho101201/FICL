@@ -136,22 +136,22 @@
 
     <div style="height: 60px; margin-top: 10px"></div>
     <!-- 하단 버튼 _구매하기 클릭 전-->
-    <div class="botBtnContainer">
+    <div id="bBtnC1" class="botBtnContainer active">
       <div>
         <img src="./images/heart_red.png" alt="heart" />
       </div>
-      <button class="btnS_black _fullW">구매하기</button>
+      <button class="btnS_black _fullW" id="openOptionPopup">구매하기</button>
     </div>
     <!-- 하단 버튼 _구매하기 클릭 후-->
-    <div class="botBtnContainer active">
+    <div id="bBtnC2" class="botBtnContainer">
       <button class="btnS_gray _fullW">장바구니담기</button>
       <span></span>
       <button class="btnS_black _fullW">바로구매</button>
     </div>
 
     <!-- 구매하기 버튼 클릭시 -->
-    <div class="optionPopup">
-      <img src="./images/optionArrowB.png" alt="cancel" />
+    <div id="optionPopup" class="optionPopup">
+      <img src="./images/optionArrowB.png" alt="cancel" class="closePopup" />
       <!-- 옵션 컨테이너 -->
       <div class="optContainer">
         <!-- 1 -->
@@ -209,4 +209,5 @@
     </div>
   </body>
   <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/modalGrp.js"></script>
 </html>

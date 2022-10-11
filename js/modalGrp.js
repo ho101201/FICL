@@ -59,4 +59,25 @@ if (document.getElementById("cGrpModal") !== null) {
   modalBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
+} else if (document.getElementById("optionPopup") !== null) {
+  // 제품 뷰
+  let modal = document.getElementById("optionPopup");
+  let openPopup2 = document.getElementById("openOptionPopup");
+  let botBtn1 = document.getElementById("bBtnC1");
+  let botBtn2 = document.getElementById("bBtnC2");
+
+  openPopup2.addEventListener("click", () => {
+    modal.style.display = "flex";
+    botBtn1.style.display = "none";
+    botBtn2.style.display = "flex";
+  });
+  closePopup.addEventListener("click", () => {
+    modal.style.display = "none";
+    botBtn1.style.display = "flex";
+    botBtn2.style.display = "none";
+  });
+
+  function btnToggle() {
+    botBtn.classList.toggle("active");
+  }
 }
