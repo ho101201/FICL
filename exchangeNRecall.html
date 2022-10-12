@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>교환 및 반품</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>교환 및 반품</p>
+      <img
+        class="iconL"
+        src="./images/arrowL.png"
+        alt="arrowL"
+        onclick="location.href='./ordHistory.html'"
+      />
+    </div>
+
+    <div class="rowBtwWrapper ordHisDateDtl">
+      <p>주문시간 : YYYY-MM-DD 00:00</p>
+      <p>주문번호: 00000000000</p>
+    </div>
+
+    <!-- container1 -->
+    <div class="container">
+      <div class="label">
+        <p>-교환 / 반품하실 상품을 선택해주세요.</p>
+        <div class="rowWrapper">
+          <input type="checkbox" />
+          <p>전체선택</p>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="simpleGrid0 _fullW purchaseListCont">
+        <div class="purchaseList2 rowStartWrapper">
+          <input type="checkbox" />
+          <div>
+            <img src="./images/samples/sample.png" />
+          </div>
+          <div></div>
+
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div class="rowStartWrapper">
+              <p>50,000원</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="purchaseList2 rowStartWrapper">
+          <input type="checkbox" />
+          <div>
+            <img src="./images/samples/sample.png" />
+          </div>
+          <div></div>
+
+          <div class="info">
+            <p>제품명출력 <br />제품명2줄출력</p>
+            <p>옵션명/추가옵션명</p>
+            <div class="rowStartWrapper">
+              <p>50,000원</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container2 -->
+    <div class="container _noLabel">
+      <div class="infoContent">
+        <p class="accent">선택</p>
+        <div class="rowWrapper" style="gap: 20px">
+          <div class="rowWrapper" style="gap: 7px">
+            <input type="radio" value="exchange" />
+            <p>교환</p>
+          </div>
+          <div class="rowWrapper" style="gap: 7px">
+            <input type="radio" value="recall" />
+            <p>반품</p>
+          </div>
+        </div>
+
+        <p class="accent">사유</p>
+        <select class="miniDropdown _fullW">
+          <option>선택</option>
+        </select>
+
+        <p></p>
+        <textarea placeholder="사유를 입력해주세요."></textarea>
+      </div>
+
+      <div class="VSpacer"></div>
+
+      <!-- '-'에 맞춰 줄 바꾸려면 grid 사용-->
+      <div class="colStartWrapper" style="padding: 0">
+        <p style="font-size: 12px">
+          - 제품의 불량인경우를 제외하고 사용 및 파손 시 교환이 불가하며 상품
+          수령 및 검수 후 교환 반품처리 됩니다. <br />(영업일 기준 7일 소요예상)
+        </p>
+        <p class="red" style="font-size: 12px">
+          - 제품의 불량이 아닌 경우 배송비가 차감되어 환불됩니다.
+        </p>
+      </div>
+    </div>
+
+    <div style="height: 60px; margin-top: 10px"></div>
+    <!-- 하단 버튼 -->
+    <div class="botBtnContainer active">
+      <button class="btnS_black _fullW" id="openApplyModal">신청하기</button>
+    </div>
+
+    <!-- modal -->
+    <div id="applyModal" class="modalBoxWrapper">
+      <div class="modal">
+        <p></p>
+        <div class="_fullW">
+          <div class="container _fullW">
+            <div class="label alignCenter">
+              <p>접수가 완료되었습니다</p>
+            </div>
+          </div>
+        </div>
+        <button class="modalConfBtn">닫기</button>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/modalGrp.js"></script>
+</html>

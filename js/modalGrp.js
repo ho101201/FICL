@@ -80,4 +80,18 @@ if (document.getElementById("cGrpModal") !== null) {
   function btnToggle() {
     botBtn.classList.toggle("active");
   }
+} else if (document.getElementById("applyModal") !== null) {
+  // 교환 및 반품
+  let modal = document.getElementById("applyModal");
+  let openPopup2 = document.getElementById("openApplyModal");
+
+  openPopup2.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+  // closePopup.addEventListener("click", () => {
+  //   modal.style.display = "none";
+  // });
+  modalBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 }

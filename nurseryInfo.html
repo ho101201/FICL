@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>양식장정보</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>양식장 정보</p>
+      <img
+        class="iconL"
+        src="./images/arrowL.png"
+        alt="arrowL"
+        onclick="location.href=''"
+      />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container1 -->
+    <div class="container">
+      <div class="label">
+        <p style="min-width: 52px">회사정보</p>
+        <p style="font-size: 12px; font-weight: 400; text-align: end">
+          ※ 사업장 정보변경 시 고객센터로 문의주세요
+        </p>
+      </div>
+
+      <div class="simpleGrid0 _fullW">
+        <div class="infoGridCont">
+          <p>양식장명 <br />(사업소)</p>
+          <p>청청수산 양식</p>
+        </div>
+
+        <div class="infoGridCont">
+          <p>대표자</p>
+          <p>대표명</p>
+        </div>
+
+        <div class="infoGridCont">
+          <p>주소</p>
+          <p>
+            (39503)<br />
+            경상북도 김천시 어모면 어모로 584-6
+          </p>
+        </div>
+
+        <div class="infoGridCont">
+          <p>대표전화</p>
+          <div class="rowBtwWrapper">
+            <p>000-0000-0000</p>
+            <button
+              class="btnS_LGray_small"
+              onclick="location.href='./nurseryInfo_change.html'"
+            >
+              변경
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container2 -->
+    <div class="container _noLabel" style="height: 180px">
+      <p style="text-align: center; font-weight: 700">
+        양식장 규모<br />수급전
+      </p>
+    </div>
+
+    <div style="height: 80px; margin-bottom: 10px; bottom: 0"></div>
+    <!-- 하단 탭바 -->
+    <div class="botTabBar">
+      <div>
+        <img src="./images/tabbar/home.png" alt="home" />
+        <a>홈</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/fish.png" alt="myNursery" />
+        <a>마이양식장</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/user-circle.png" alt="user" />
+        <a>나의 계정</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/cart.png" alt="cart" />
+        <a>구매하기</a>
+      </div>
+      <div>
+        <img src="./images/tabbar/document.png" alt="report" />
+        <a>리포트</a>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>
