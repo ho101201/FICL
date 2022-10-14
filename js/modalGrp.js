@@ -94,4 +94,25 @@ if (document.getElementById("cGrpModal") !== null) {
   modalBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
+} else if (document.getElementById("idAuthFailModal") !== null) {
+  // 아이디 찾기_아이디 인증 실패 + 비밀번호 찾기
+  let modal = document.getElementById("idAuthFailModal");
+  let openPopup = document.getElementById("openIdAuthFailModal");
+  let modal2 = document.getElementById("pwAuthFailModal");
+  let openPopup2 = document.getElementById("openPwAuthFailModal");
+
+  let closePopup2 = document.getElementsByClassName("closePopup2")[(0, 1)];
+
+  openPopup.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+  openPopup2.addEventListener("click", () => {
+    modal2.style.display = "flex";
+  });
+  closePopup.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  closePopup2.addEventListener("click", () => {
+    modal2.style.display = "none";
+  });
 }

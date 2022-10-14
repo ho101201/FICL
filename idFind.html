@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>아이디찾기</title>
+  </head>
+  <body>
+    <div class="fullBody">
+      <div class="loginHead">
+        <img src="./images/logos/logo-1.png" alt="logo_FICL" class="logo" />
+      </div>
+
+      <!-- tab -->
+      <div class="tab_menu">
+        <!-- tab btn -->
+        <ul class="btnList3">
+          <li class="tabBtn3 active">
+            <a> 아이디 찾기 </a>
+            <div></div>
+          </li>
+
+          <li class="tabBtn3">
+            <a> 비밀번호 찾기 </a>
+            <div></div>
+          </li>
+        </ul>
+
+        <!-- tab contents -->
+        <div class="tab_inner3_wrap">
+          <!-- content1 아이디 찾기-->
+          <div class="tab_inner3 active">
+            <div class="simpleGrid0 borderBlack">
+              <div class="loginInputContent">
+                <img src="./images/loginPage/idCard.png" alt="user" />
+                <input
+                  type="text"
+                  placeholder="이름을 입력하세요"
+                  class="loginInput"
+                />
+              </div>
+            </div>
+
+            <div
+              class="colStartWrapper"
+              style="padding: 20px 0 0 0; font-weight: 900"
+            >
+              <p>휴대폰인증</p>
+              <div class="rowCenterWrapper mobileCert">
+                <select class="centerAlinedDropdown _fullW">
+                  <option>010</option>
+                </select>
+                <input type="number" />
+
+                <input type="number" />
+              </div>
+            </div>
+
+            <div class="VSpacer"></div>
+
+            <button class="btnS_gray _fullW">인증번호 발송</button>
+
+            <div class="VSpacer"></div>
+            <div
+              class="colStartWrapper"
+              style="padding: 10px 0 0 0; font-weight: 900"
+            >
+              <p>인증번호 입력</p>
+              <div class="_fullW">
+                <input type="number" placeholder="인증번호를 입력해주세요." />
+              </div>
+            </div>
+
+            <div class="colStartWrapper" style="gap: 0; padding: 10px 0 0 0">
+              <p class="red" style="text-align: center">
+                인증을 실패하였습니다. 다시 입력해주세요.
+              </p>
+              <p>인증되었습니다</p>
+            </div>
+
+            <div class="VSpacer" style="height: 28px"></div>
+
+            <button class="btnS_black _fullW" id="openIdAuthFailModal">
+              아이디찾기
+            </button>
+
+          </div>
+        </div>
+
+        <!-- content2 비밀번호 찾기-->
+        <div class="tab_inner3">
+          <div class="simpleGrid0 borderBlack">
+            <div class="loginInputContent">
+              <img src="./images/loginPage/user.png" alt="user" />
+              <input
+                type="text"
+                placeholder="아이디를 입력하세요"
+                class="loginInput"
+              />
+            </div>
+            <div class="loginInputContent">
+              <img src="./images/loginPage/idCard.png" alt="user" />
+              <input
+                type="text"
+                placeholder="이름을 입력하세요"
+                class="loginInput"
+              />
+            </div>
+          </div>
+
+          <div
+                class="colStartWrapper"
+                style="padding: 10px 0 0 0; font-weight: 900"
+            >
+                <p>휴대폰인증</p>
+                <div class="rowCenterWrapper mobileCert">
+                <select class="centerAlinedDropdown _fullW">
+                    <option>010</option>
+                </select>
+                <input type="number" />
+
+                <input type="number" />
+                </div>
+            </div>
+
+            <div class="VSpacer"></div>
+
+            <button class="btnS_gray _fullW">인증번호 발송</button>
+
+            <div class="VSpacer"></div>
+            <div
+                class="colStartWrapper"
+                style="padding: 10px 0 0 0; font-weight: 900"
+            >
+                <p>인증번호 입력</p>
+                <div class="_fullW">
+                <input type="number" placeholder="인증번호를 입력해주세요." />
+                </div>
+            </div>
+
+            <div class="colStartWrapper" style="gap: 0; padding: 10px 0 0 0">
+                <p class="red" style="text-align: center">
+                인증을 실패하였습니다. 다시 입력해주세요.
+                </p>
+                <p>인증되었습니다</p>
+            </div>
+
+            <div class="VSpacer" style="height: 28px"></div>
+
+            <button class="btnS_black _fullW" id="openPwAuthFailModal">비밀번호 찾기</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <!-- 아이디 인증 실패 -->
+    <div
+      id="idAuthFailModal"
+      class="modalBoxWrapper"
+      style="padding-top: 30vh; display: none"
+    >
+      <div class="modal">
+        <!-- <p>인증실패</p> -->
+        <div class="modalBody AuthFail">
+          <p>인증 실패</p>
+          <p>회원정보가 없습니다.</p>
+        </div>
+        <button class="closePopup">닫기</button>
+      </div>
+    </div>
+
+    <!--비밀번호 찾기 -->
+    <div
+      id="pwAuthFailModal"
+      class="modalBoxWrapper"
+      style="padding-top: 10vh; display: none"
+    >
+      <!--  -->
+      <div class="modal">
+        <!-- <p>비밀번호 규정</p> -->
+        <div class="modalBody AuthFail" style="gap: 12px;">
+            <p>비밀번호 규정</p>
+            <p>- 8 ~ 14 자리 영문 대소문자, 숫자, 특수문자를
+                사용하실 수 있습니다</p>
+            <p>
+                - 단, ‘&’, `<`, ‘>’, ‘\’, ‘%’ 특수문자는 비밀번호에 사용하실 수 없습니다.
+            </p>
+            <p>
+                - 사용자 계정과 동일하거나 계정 문자를 포함한 비밀번호는 사용하실 수 없습니다.
+            </p>
+            <p>
+                - 개인정보 보호/안전한 서비스 이용을 위하여, 비밀번호를 90일마다 변경해주시는 것을 권장합니다.
+            </p>
+        </div>
+        <button class="closePopup2">닫기</button>
+      </div>
+
+      <!--  -->
+      <div class="modal">
+        <!-- <p>변경 성공</p> -->
+        <div class="modalBody AuthFail">
+          <p>비밀번호가 변경되었습니다</p>
+        </div>
+        <button class="closePopup2">닫기</button>
+      </div>
+    </div>
+
+
+
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/modalGrp.js"></script>
+</html>

@@ -36,6 +36,25 @@ tabItem2.forEach((tab, idx) => {
   });
 });
 
+//3
+const tabItem3 = document.querySelectorAll(".tabBtn3");
+const tabInner3 = document.querySelectorAll(".tab_inner3");
+
+tabItem3.forEach((tab, idx) => {
+  tab.addEventListener("click", function () {
+    tabInner3.forEach((inner) => {
+      inner.classList.remove("active");
+    });
+
+    tabItem3.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    tabItem3[idx].classList.add("active");
+    tabInner3[idx].classList.add("active");
+  });
+});
+
 //플로팅 버튼
 $(document).ready(function () {
   /*웹페이지 열었을 때*/
@@ -151,3 +170,6 @@ $(function () {
 });
 
 // 제품 뷰 옵션 추가
+
+// 체크박스
+$("input:checkbox").prop("checked", true);

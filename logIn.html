@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>로그인</title>
+  </head>
+  <body>
+    <div class="fullBody">
+      <div class="loginHead">
+        <img src="./images/logos/logo-1.png" alt="logo_FICL" class="logo" />
+      </div>
+
+      <!-- tab -->
+      <div class="tab_menu">
+        <!-- tab btn -->
+        <ul class="btnList3">
+          <li class="tabBtn3 active">
+            <a> 회원번호 로그인 </a>
+            <div></div>
+          </li>
+
+          <li class="tabBtn3">
+            <a> 휴대폰 로그인 </a>
+            <div></div>
+          </li>
+        </ul>
+        <!-- tab contents -->
+        <div class="tab_inner3_wrap">
+          <!-- content1 회원번호 로그인-->
+          <div class="tab_inner3 active">
+            <!-- 아이디 입력 -->
+            <div class="simpleGrid0 borderBlack">
+              <div class="loginInputContent">
+                <img src="./images/loginPage/user.png" alt="user" />
+                <input
+                  type="text"
+                  placeholder="회원번호를 입력하세요"
+                  class="loginInput"
+                />
+              </div>
+              <div class="loginInputContent">
+                <img src="./images/loginPage/lock-square.png" alt="user" />
+                <input
+                  type="text"
+                  placeholder="비밀번호를 입력하세요"
+                  class="loginInput"
+                />
+              </div>
+            </div>
+
+            <div class="VSpacer"></div>
+
+            <div class="rowStartWrapper" style="margin-left: 15px">
+              <input type="checkbox" name="idSave" onclick="alert" />
+              <p>아이디 저장</p>
+            </div>
+          </div>
+          <!-- content2 휴대폰 로그인-->
+          <div class="tab_inner3">
+            <div class="simpleGrid0 borderBlack">
+              <div class="loginInputContent">
+                <img src="./images/loginPage/user.png" alt="user" />
+                <input
+                  type="text"
+                  placeholder="휴대폰 번호를 입력하세요"
+                  class="loginInput"
+                />
+              </div>
+            </div>
+
+            <div class="VSpacer"></div>
+
+            <div class="rowStartWrapper" style="margin-left: 15px">
+              <input type="checkbox" name="idSave" onclick="alert" />
+              <p>아이디 저장</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btnS_black _fullW">로그인</button>
+
+      <div class="VSpacer"></div>
+
+      <div class="rowCenterWrapper">
+        <p class="red" style="text-align: center">
+          가입하지 않은 아이디이거나, 잘못된 비밀번호입니다.
+        </p>
+      </div>
+
+      <div class="colWrapper loginDoc">
+        <div class="rowCenterWrapper">
+          <a>회원가입</a>
+          <p style="color: #a9aab4">|</p>
+          <a>아이디 찾기</a>
+          <p style="color: #a9aab4">|</p>
+          <a>비밀번호 찾기</a>
+        </div>
+
+        <img src="./images/logos/logo-3.png" alt="cLogo" />
+        <p>고객센터: 070-7576-7567</p>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>
