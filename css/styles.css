@@ -695,6 +695,13 @@ textarea::placeholder {
 
   bottom: 0;
 }
+
+.tabBtn:hover,
+.tabBtn2:hover,
+.tabBtn3:hover {
+  cursor: pointer;
+}
+
 .tab_inner3_wrap {
   margin: 15px 0 20px 0;
 }
