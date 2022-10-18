@@ -23,7 +23,7 @@
     <!-- 상단 탭 -->
     <div class="tab_menu">
       <ul class="btnList">
-        <li class="tabBtn active">
+        <li class="tabBtn ">
           <a> 양식장현황 </a>
           <div></div>
         </li>
@@ -31,7 +31,7 @@
           <a> 퀘스트 </a>
           <div></div>
         </li>
-        <li class="tabBtn">
+        <li class="tabBtn active">
           <a> 가계부 </a>
           <div></div>
         </li>
@@ -39,21 +39,17 @@
 
       <div class="tab_inner_wrap">
         <!-- 양식장현황 -->
-        <div class="tab_inner active">
+        <div class="tab_inner">
           <div class="VSpacer"></div>
           <!-- container1 -->
           <div class="rowCalendar">
             <div class="YMSelector">
               <div>
-                <select class="year">
-                  <option value="2022">2022년</option>
-                  <option value="2021">2021년</option>
-                  <option value="2020">2020년</option>
+                <select class="yearWrap">
+                  <option value="year" class="year"></option>
                 </select>
-                <select class="month">
-                  <option value="9">9월</option>
-                  <option value="8">8월</option>
-                  <option value="7">7월</option>
+                <select class="monthWrap">
+                  <option value="month" class="month"></option>
                 </select>
               </div>
 
@@ -203,8 +199,198 @@
           </div>
         </div>
 
-        <!--  -->
-        <div class="tab_inner">탭 컨텐츠입니다3.</div>
+        <!-- 가계부  -->
+        <div class="tab_inner active">
+          <div class="tab_menu">
+            <ul class="btnList4">
+              <li class="tabBtn4 active">
+                <a> 일별 </a>
+              </li>
+              <li class="tabBtn4">
+                <a> 월별 </a>
+              </li>
+              <li class="tabBtn4">
+                <a> 결산 </a>
+              </li>
+            </ul>
+
+            <div class="tab_inner4_wrap">
+              <!-- 일별  -->
+              <div class="tab_inner4 active">
+                
+                  <div class="rowCalendar">
+                    <div class="YMSelector">
+                      <div>
+                        <select class="yearWrap">
+                          <option value="2022" class="year">2022년</option>
+                        </select>
+                        <select class="monthWrap">
+                          <option value="10" class="month">10월</option>
+                        </select>
+                      </div>
+
+                      <button class="btnS_black">내역조회</button>
+                    </div>
+
+                    <div class="DSelector">
+                      <div>
+                        <p>일</p>
+                        <p>1</p>
+                      </div>
+                      <div>
+                        <p>월</p>
+                        <p>2</p>
+                      </div>
+                      <div>
+                        <p>화</p>
+                        <p>3</p>
+                      </div>
+                      <div class="selected">
+                        <p>수</p>
+                        <p>4</p>
+                      </div>
+                      <div>
+                        <p>목</p>
+                        <p>5</p>
+                      </div>
+                      <div>
+                        <p>금</p>
+                        <p>6</p>
+                      </div>
+                      <div>
+                        <p>토</p>
+                        <p>7</p>
+                      </div>
+                    </div>
+                  </div>
+              
+
+                <div class="btnContainer rowBtwWrapper">
+                  <button class="btnS_red _fullW">지출입력</button>
+                  <div class="HSpacer"></div>
+                  <button class="btnS_blue _fullW">수입입력</button>
+                </div>
+
+                <!-- 가계부 등록 없음 -->
+                <div class=" container _noLabel constcolWrapper" style="min-height: 180px; display: none;">
+                  <p>등록내용이 없습니다.</p>
+                </div>
+
+                <!--  -->
+                <div class="container _noLabel">
+                  <div class="rowEndWrapper _fullW" style="padding: 0 0 10px 0;">
+                    <p>금일 총 수익 :</p>
+                    <p class="red">2,700,000 원</p>
+                  </div>
+                  <div class="simpleGrid0 _fullW dailyAccount">
+                    <!--  -->
+                    <div class="colStartWrapper">
+                      <p>분류유형(n개)</p>
+                      <div class="rowBtwWrapper">
+                        <div class="inputWrapper2">
+                          <input type="text" placeholder="메모입력" />
+                          <img src="./images/memo.png" alt="memo" />
+                        </div>
+                        <p class="red">-150,000</p>
+                      </div>
+                    </div>
+                    <div class="Hline" style="margin: 0 10px 0 10px ;"></div>
+                    <!--  -->
+                    <div class="colStartWrapper">
+                      <p>분류유형(n개)</p>
+                      <div class="rowBtwWrapper">
+                        <div class="inputWrapper2">
+                          <input type="text" placeholder="메모입력" />
+                          <img src="./images/memo.png" alt="memo" />
+                        </div>
+                        <p class="red">-150,000</p>
+                      </div>
+                    </div>
+                    <div class="Hline" style="margin: 0 10px 0 10px ;"></div>
+                    
+                    <!--  -->
+                    <div class="colStartWrapper">
+                      <p>분류유형(n개)</p>
+                      <div class="rowBtwWrapper">
+                        <div class="inputWrapper2">
+                          <input type="text" placeholder="메모입력" />
+                          <img src="./images/memo.png" alt="memo" />
+                        </div>
+                        <p class="red">-150,000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- 월별 -->
+              <div class="tab_inner4">
+
+                <div class="container _noLabel calendar _fullW">
+                  <div class="YMSelector _fullW rowBtwWrapper">
+                    <div class="rowStartWrapper" style="gap: 15px;">
+                      <select class="yearWrap">
+                        <option value="2022" class="year">2022년</option>
+                      </select>
+                      <select class="monthWrap">
+                        <option value="10" class="month">10월</option>
+
+                      </select>
+                    </div>
+
+                    <button class="btnS_black" id="openConfPopup">내역조회</button>
+                  </div>
+
+                  <div class="VSpacer" style="height: 20px;"></div>
+                  <div class="dates"></div>
+                </div>
+
+              </div>
+
+              <!-- 결산  -->
+              <div class="tab_inner4">
+                <div class="rowBtwWrapper container _noLabel">
+                  <input class="whiteBgInput center" type="text" value="2022년 12월 31일" />
+                  <p>~</p>
+                  <input class="whiteBgInput center" type="text" value="2022년 12월 31일" />
+                </div>
+                <!--  -->
+                <div class="VSpacer"></div>
+                <div class="container _noLabel" style="height: 255px;">
+
+                </div>
+                <!--  -->
+                <div class="btnContainer">
+                  <button class="btnS_black _fullW">결산서 보기</button>
+                </div>
+                <!--  -->
+                <div class="container _noLabel">
+                  <div class="simpleGrid1">
+                    <div>
+                      <p>총 수입</p>
+                      <p class="blue">00,000,000원</p>
+                    </div>
+                    <div>
+                      <p>총 지출</p>
+                      <p class="red">00,000,000원</p>
+                    </div>
+                    <div>
+                      <p>순이익</p>
+                      <p class="accent">00,000,000원</p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+      </div>
+    </div>
+    <!-- modal -->
+    <div id="confPopup" class="confPopupWrapper">
+      <div class="confPopup">
+        
       </div>
     </div>
 
@@ -215,8 +401,8 @@
         <img src="./images/tabbar/home.png" alt="home" />
         <a>홈</a>
       </div>
-      <div class="active">
-        <img src="./images/tabbar/fishC.png" alt="myNursery" />
+      <div>
+        <img src="./images/tabbar/fish.png" alt="myNursery" />
         <a>마이양식장</a>
       </div>
       <div>
@@ -234,4 +420,5 @@
     </div>
   </body>
   <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/modalGrp.js"></script>
 </html>

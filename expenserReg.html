@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>가계부 지출등록</title>
+  </head>
+  <body>
+    <div class="head">
+      <!--  -->
+      <p>지출등록</p>
+      <img class="iconL" src="./images/arrowL.png" alt="arrowL" />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <div class="container _noLabel" >
+        <div class="colWrapper">
+            <!--  -->
+            <div class="label">
+                <p>YYYY년 MM월 DD일</p>
+                <button class="btnS_LGray_small">변경</button>
+            </div>
+            <div class="fieldContents">
+                <div class="rowBtwWrapper _fullW">
+                    <p>자산</p>
+                    <select class="_fullW">
+                        <option>자산유형</option>
+                    </select>
+                    <p>분류</p>
+                    <div class="rowStartWrapper">
+                        <select class="_fullW">
+                            <option>분류유형1</option>
+                        </select>
+                        <select class="_fullW">
+                            <option>분류유형2</option>
+                        </select>
+                    </div>
+                    <p>금액</p>
+                    <input type="text" placeholder="지출금액을 입력해주세요" />
+                    <p>수량</p>
+                    <input type="text" placeholder="수량을 입력해주세요" />
+                    <p>메모</p>
+                    <input type="text"/>
+                </div>
+            </div>
+            <div class="Hline" style="margin: 10px 0 10px 0;"></div>
+            <!--  -->
+            <div class="label">
+                <p>YYYY년 MM월 DD일</p>
+                <button class="btnS_LGray_small">변경</button>
+            </div>
+            <div class="fieldContents">
+                <div class="rowBtwWrapper _fullW">
+                    <p>자산</p>
+                    <select class="_fullW">
+                        <option>자산유형</option>
+                    </select>
+                    <p>분류</p>
+                    <div class="rowStartWrapper">
+                        <select class="_fullW">
+                            <option>분류유형1</option>
+                        </select>
+                        <select class="_fullW">
+                            <option>분류유형2</option>
+                        </select>
+                    </div>
+                    <p>금액</p>
+                    <input type="text" placeholder="지출금액을 입력해주세요" />
+                    <p>수량</p>
+                    <input type="text" placeholder="수량을 입력해주세요" />
+                    <p>메모</p>
+                    <input type="text"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  -->
+    <div class="colStartWrapper botBtnContainer2">
+        <button class="btnS_LGray _fullW">지출추가</button>
+        <button class="btnS_red _fullW">지출등록</button>
+    </div>
+
+    <div style="height: 200px; margin-bottom: 10px; bottom: 0"></div>
+    <!-- 하단 탭바 -->
+    <div class="botTabBar">
+    <div>
+        <img src="./images/tabbar/home.png" alt="home" />
+        <a>홈</a>
+    </div>
+    <div>
+        <img src="./images/tabbar/fish.png" alt="myNursery" />
+        <a>마이양식장</a>
+    </div>
+    <div>
+        <img src="./images/tabbar/user-circle.png" alt="user" />
+        <a>나의 계정</a>
+    </div>
+    <div>
+        <img src="./images/tabbar/cart.png" alt="cart" />
+        <a>구매하기</a>
+    </div>
+    <div>
+        <img src="./images/tabbar/document.png" alt="report" />
+        <a>리포트</a>
+    </div>
+
+    
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>

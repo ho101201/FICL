@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" type="text/css" />
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.js"
+      integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
+      crossorigin="anonymous"
+    ></script>
+    <title>통합검색</title>
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <div class="head">
+      <p>통합검색</p>
+      <img class="iconL" src="./images/arrowL.png" alt="arrowL" />
+      <img class="iconR" src="./images/btn_x_black.png" alt="x" />
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <!-- container1 -->
+    <div class="container _noLabel">
+      <div class="inputWrapper _fullW">
+        <input id="search" type="text" placeholder="검색어를 입력해주세요" />
+        <img
+          src="./images/search.png"
+          alt="search"
+          style="width: 20px; height: 20px"
+        />
+      </div>
+    </div>
+
+    <div class="VSpacer"></div>
+
+    <div class="container" style="display: none">
+      <div class="label">
+        <p>최근검색어</p>
+      </div>
+
+      <div class="recentSearchList _fullW">
+        <div class="rowBtwWrapper">
+          <p>최근검색어1</p>
+          <img src="./images/x.png" alt="x" />
+        </div>
+        <div class="rowBtwWrapper">
+          <p>최근검색어1</p>
+          <img src="./images/x.png" alt="x" />
+        </div>
+        <div class="rowBtwWrapper">
+          <p>최근검색어1</p>
+          <img src="./images/x.png" alt="x" />
+        </div>
+      </div>
+    </div>
+    <div
+      class="container _noLabel rowBtwWrapper"
+      style="border-top: 1px solid #d9d9d9; display: none"
+    >
+      <a>검색어 저장 끄기</a>
+      <a>전체삭제</a>
+    </div>
+
+    <div class="VSpacer"></div>
+    <!-- 탭 1 수정 -->
+    <div class="tab_menu">
+      <ul class="btnList">
+        <li class="tabBtn active">
+          <a> 메뉴(1) </a>
+          <div></div>
+        </li>
+        <li class="tabBtn">
+          <a> 상품(99) </a>
+          <div></div>
+        </li>
+        <li class="tabBtn">
+          <a> 기타(3) </a>
+          <div></div>
+        </li>
+      </ul>
+
+      <div class="VSpacer"></div>
+
+      <div class="tab_inner_wrap">
+        <!--  -->
+        <div class="tab_inner active">
+          <div class="SResultCont">
+            <div class="rowStartWrapper SResult_menu">
+              <p>고객센터</p>
+              <p>></p>
+              <p>매뉴얼</p>
+            </div>
+            <div class="rowStartWrapper SResult_menu">
+              <p>고객센터</p>
+              <p>></p>
+              <p>매뉴얼</p>
+            </div>
+            <div class="rowStartWrapper SResult_menu">
+              <p>고객센터</p>
+              <p>></p>
+              <p>매뉴얼</p>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="tab_inner">
+          <div class="productList">
+            <!--  -->
+            <div class="product">
+              <img src="./images/samples/sample.png" />
+              <div>
+                <p>소모품/기자제</p>
+                <p>제품 제목 최대2줄 출력 초과시 … 처리</p>
+
+                <div>
+                  <p>50,000원</p>
+                  <p><del>80,000원</del></p>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="product">
+              <img src="./images/samples/sample.png" />
+              <div>
+                <p>소모품/기자제</p>
+                <p>제품 제목 최대2줄 출력 초과시 … 처리</p>
+                <div>
+                  <p>50,000원</p>
+                  <p><del>80,000원</del></p>
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="product">
+              <img src="./images/samples/sample.png" />
+              <div>
+                <p>소모품/기자제</p>
+                <p>제품 제목 최대2줄 출력 초과시 … 처리</p>
+                <div>
+                  <p>50,000원</p>
+                  <p><del>80,000원</del></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+        <div class="tab_inner">
+          <div class="SResultCont">
+            <div class="SResult_ect">
+              <p>Depth1 > Depth2</p>
+              <p>양식장 매뉴얼 지적재산권 안내</p>
+              <p>
+                매뉴얼이란 특정 제품 및 시스템을 사용하는데 도움이 되는
+                서식이다. 매뉴얼은 특정 시스템을 사용하는 사람들에게 도움을
+                제공하기 위한 기술 소통 문서를 말한다. 
+              </p>
+            </div>
+          </div>
+
+          <div class="SResultCont">
+            <div class="SResult_ect">
+              <p>Depth1 > Depth2</p>
+              <p>양식장 매뉴얼 지적재산권 안내</p>
+              <p>
+                매뉴얼이란 특정 제품 및 시스템을 사용하는데 도움이 되는
+                서식이다. 매뉴얼은 특정 시스템을 사용하는 사람들에게 도움을
+                제공하기 위한 기술 소통 문서를 말한다. 
+              </p>
+            </div>
+          </div>
+
+          <div class="SResultCont">
+            <div class="SResult_ect">
+              <p>Depth1 > Depth2</p>
+              <p>양식장 매뉴얼 지적재산권 안내</p>
+              <p>
+                매뉴얼이란 특정 제품 및 시스템을 사용하는데 도움이 되는
+                서식이다. 매뉴얼은 특정 시스템을 사용하는 사람들에게 도움을
+                제공하기 위한 기술 소통 문서를 말한다. 
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="noSearchResult" style="display: none">
+          <div class="container _noLabel _fullH">
+            <p>‘검색어’ 검색결과가 없습니다.</p>
+            <p>문의가 필요하시면 고객센터로 연락주세요.</p>
+            <p>고객센터 070-7576-7567</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- test -->
+  </body>
+  <script type="text/javascript" src="./js/index.js"></script>
+</html>

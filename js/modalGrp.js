@@ -115,4 +115,19 @@ if (document.getElementById("cGrpModal") !== null) {
   closePopup2.addEventListener("click", () => {
     modal2.style.display = "none";
   });
+} else if (document.getElementById("confPopup") !== null) {
+  // 가계부
+  let modal = document.getElementById("confPopup");
+  let openPopup2 = document.getElementById("openConfPopup");
+
+  openPopup2.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+  closePopup.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  function btnToggle() {
+    botBtn.classList.toggle("active");
+  }
 }
