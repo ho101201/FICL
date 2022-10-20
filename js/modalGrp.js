@@ -126,8 +126,4 @@ if (document.getElementById("cGrpModal") !== null) {
   closePopup.addEventListener("click", () => {
     modal.style.display = "none";
   });
-
-  function btnToggle() {
-    botBtn.classList.toggle("active");
-  }
 }

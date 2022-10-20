@@ -23,7 +23,7 @@
     <!-- 상단 탭 -->
     <div class="tab_menu">
       <ul class="btnList">
-        <li class="tabBtn ">
+        <li class="tabBtn active">
           <a> 양식장현황 </a>
           <div></div>
         </li>
@@ -31,7 +31,7 @@
           <a> 퀘스트 </a>
           <div></div>
         </li>
-        <li class="tabBtn active">
+        <li class="tabBtn ">
           <a> 가계부 </a>
           <div></div>
         </li>
@@ -39,7 +39,7 @@
 
       <div class="tab_inner_wrap">
         <!-- 양식장현황 -->
-        <div class="tab_inner">
+        <div class="tab_inner active">
           <div class="VSpacer"></div>
           <!-- container1 -->
           <div class="rowCalendar">
@@ -168,39 +168,52 @@
         <div class="tab_inner">
           <div class="VSpacer"></div>
 
-          <div class="patternBg">
-            <canvas class="greenCircle" width="100px" height="100px"></canvas>
-            <div class="textAssemble">
-              <p>누구나 시작되는 양식</p>
-              <p>흰다리새우 양식 퀘스트</p>
-              <img src="./images/logos/logo-1.png" alt="logo" />
-              <p>Do it Simple, Do it FICL</p>
-            </div>
-          </div>
+          <div style="height: calc(100vh - 335px);">
+            <div class="bgPattern_quest">
+              
+              <div class="textAssemble">
+                <p>누구나 시작되는 양식 <br/>흰다리새우 양식 퀘스트</p>
+                <img src="./images/logos/logo-1.png" alt="logo" />
+                <p>Do it Simple, Do it FICL</p>
+              </div>
 
-          <div class="VSpacer"></div>
-          <div class="container" style="padding: 10px 20px 10px 20px">
-            <div class="styledBtn">
-              <img
-                src="./images/btn/styledBtn.png"
-                alt="btn"
-                style="position: absolute; margin-bottom: 2px"
-              />
-              <div></div>
-              <a href="./quest.html">양식 시작하기</a>
-            </div>
+              <div>
+                <div class="arc">
+                  <div></div>
+                </div>
+                <div class="Obj"></div>
+                <div class="Box"></div>
+                <div class="Obj"></div>
 
+              </div>
+            </div>
+  
             <div class="VSpacer"></div>
 
-            <button class="btnS_white_rounded">
-              <img src="./images/rollback.png" alt="rbIcon" />
-              퀘스트 생성취소
-            </button>
+            <div class="container" style="padding: 10px 20px 10px 20px">
+              <div class="styledBtn">
+                <div>
+                  <img src="./images/btn/styledBtn_green.png" alt="btn"/>
+                  <a>양식장 준비하기</a>
+                </div>
+                <div>
+                  <a href="./quest.html">양식 시작하기</a>
+                </div>
+              </div>
+              <div class="VSpacer"></div>
+    
+              <button class="btnS_white_rounded">
+                <img src="./images/rollback.png" alt="rbIcon" />
+                퀘스트 생성취소
+              </button>
+            </div>
           </div>
+
+          
         </div>
 
         <!-- 가계부  -->
-        <div class="tab_inner active">
+        <div class="tab_inner">
           <div class="tab_menu">
             <ul class="btnList4">
               <li class="tabBtn4 active">
@@ -390,19 +403,46 @@
     <!-- modal -->
     <div id="confPopup" class="confPopupWrapper">
       <div class="confPopup">
+        <div class="rowCenterWrapper popupHead">
+          <p class="year_month_day"></p>
+          <img class="closePopup" src="./images/x.png" />
+        </div>
         
+        <div class="container _noLabel popupBody">
+          <div class="rowBtwWrapper">
+            <p>지출</p>
+            <p class="red">-150,000</p>
+          </div>
+          <div class="rowBtwWrapper">
+            <p>수입</p>
+            <p class="blue">+1,150,000</p>
+          </div>
+          <div class="Hline"></div>
+          <div class="rowBtwWrapper">
+            <p>손익</p>
+            <p>+1,000,000</p>
+          </div>
+        </div>
+        
+        <div class="rowBtwWrapper btnContainer">
+          <button class="btnS_red _fullW" onclick="location.href='./expenserReg.html'">지출입력</button>
+          <button class="btnS_blue _fullW"  onclick="location.href='./importReg.html'">수입입력</button>
+        </div>
+
+        <div class="VSpacer"></div>
+
       </div>
     </div>
 
-    <div style="height: 80px; margin-bottom: 20px"></div>
+    <div style="height: 80px; margin-bottom: 10px"></div>
     <!-- 하단 탭바 -->
     <div class="botTabBar">
       <div>
         <img src="./images/tabbar/home.png" alt="home" />
         <a>홈</a>
       </div>
-      <div>
-        <img src="./images/tabbar/fish.png" alt="myNursery" />
+      <div class="active">
+        <img src="./images/tabbar/fishC.png" alt="myNursery" />
         <a>마이양식장</a>
       </div>
       <div>
@@ -420,5 +460,6 @@
     </div>
   </body>
   <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/date.js"></script>
   <script type="text/javascript" src="./js/modalGrp.js"></script>
 </html>
