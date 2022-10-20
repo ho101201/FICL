@@ -1216,16 +1216,17 @@ textarea::placeholder {
   background-color: #f46242;
   color: #fff;
 }
+.blueBg {
+  background: #08baed;
+}
 .red {
   color: #f46242;
 }
 .blue {
   color: #089bed;
-  background: #089bed;
 }
 .green {
   color: #0cab7c;
-  background: #0cab7c;
 }
 .black {
   color: #404152;
@@ -2307,7 +2308,7 @@ input {
   height: 100%;
 }
 .bgPattern_quest > div:last-of-type > :first-child {
-  left: calc(20vw);
+  right: calc(20vh + 80vw / 2);
   top: calc(26vh - 168px);
 }
 .bgPattern_quest > div:last-of-type > :nth-child(2) {
@@ -2316,7 +2317,7 @@ input {
   height: 48vh;
 
   top: calc(-10vh - 168px);
-  left: 5vw;
+  right: calc(80vw / 2 - 22vh);
 
   align-items: center;
 
