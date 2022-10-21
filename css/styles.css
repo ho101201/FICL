@@ -3626,6 +3626,31 @@ input {
   padding: 16px 0 16px 0;
   border-bottom: 1px solid #d9d9d9;
 }
+.paging {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  align-items: center;
+
+  padding: 0 20px 0 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 256px;
+}
+.paging > img {
+  width: 25px;
+  height: 25px;
+}
+.paging > p {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 24px;
+}
+.paging .active {
+  border-radius: 50%;
+  color: #fff;
+  background: #404152;
+}
 
 /* 반응형 */
 @media screen and (max-width: 340px) {
