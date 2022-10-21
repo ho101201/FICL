@@ -1562,7 +1562,6 @@ td {
 
 .accorWrapper .accorClip:last-of-type {
   border-bottom: none;
-  background: #000;
 }
 
 .accorContent {
@@ -1863,6 +1862,28 @@ td {
 .SResult_ect > p:nth-of-type(2) {
   font-weight: 900;
   margin-top: 10px;
+}
+
+/* 햄버거버튼_메뉴오픈 */
+.accorWrapper.hamburger {
+  border: none;
+}
+.accorClip.hamburger {
+  background: #fff;
+  height: 50px;
+  border-bottom: 1px solid #f9f9f9;
+  gap: 10px;
+}
+.accorContent.hamburger {
+  padding: 0;
+}
+.accorContent .hamburger {
+  padding: 0;
+  height: 50px;
+  border-top: 1px solid #f9f9f9;
+
+  display: flex;
+  align-items: center;
 }
 
 /* 마이양식장 */
